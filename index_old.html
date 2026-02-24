@@ -1,0 +1,4226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System</title>
+<link rel="stylesheet" href="DesignSystem.min.css">
+</head>
+
+<body>
+
+
+  <header class="topbar">
+<div class="topbar-left">
+    <img src="./image/A1.png" alt="Logo" class="logo">
+    <!--<span class="titleee">SURANAREE UNIVERSITY OF TECHNOLOGY HOSPITAL</span>-->
+    </div>
+    <div class="topbar-right">
+      <span class="titleeee">version 1.0</span>
+    </div>
+</header>
+
+<button class="toggle-btn" id="toggleBtn" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+    <h3>Component</h3>
+    <a href="#component-1-button" onclick="hideSidebar()">Button</a>
+    <a href="#component-2-colors" onclick="hideSidebar()">Color System</a>
+    <a href="#component-3-checkbox" onclick="hideSidebar()">Checkbox</a>
+    <a href="#component-4-toggle" onclick="hideSidebar()">Toggle Switch</a>
+    <a href="#component-5-Navbar" onclick="hideSidebar()">Navbar</a>
+    <a href="#component-6-search-set" onclick="hideSidebar()">Search - Dropdown</a>
+    <a href="#component-7-alerts" onclick="hideSidebar()">Alerts</a>
+    <a href="#component-8-pagination" onclick="hideSidebar()">Pagination</a>
+    <a href="#component-9-signin" onclick="hideSidebar()">Sign In</a>
+    <a href="#component-10-signup" onclick="hideSidebar()">Sign Up</a>
+    <a href="#component-11-form" onclick="hideSidebar()">Form</a>
+    <a href="#component-12-table" onclick="hideSidebar()">Table</a>
+    <a href="#component-13-Data table" onclick="hideSidebar()">Data Table</a>
+
+
+<a href="https://www.sut.ac.th/SUT_IDENTITY/SUT_Font/OTF%20Files.zip"
+   target="_blank"
+   style="color:#337fea;">
+  SUT_Font OTF.zip
+</a>
+
+<a href="https://www.sut.ac.th/SUT_IDENTITY/SUT_Font/TTF%20Files.zip"
+   target="_blank"
+   style="color:#337fea;;">
+  SUT_Font TTF.zip
+</a>
+
+</aside>
+
+<!-- CONTENT -->
+<main class="content" id="content">
+<h1>Design System</h1>
+
+<!------------------------------- COMPONENT 1 Button --------------------------------->
+<section id="component-1-button">
+<h2>Component 1 – Button</h2>
+<div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(this,'c1-preview')">Preview</button>
+    <button class="tab-btn" onclick="openTab(this,'c1-html')">HTML</button>
+    <button class="tab-btn" onclick="openTab(this,'c1-sizes')">Sizes</button>
+    <!--<button class="tab-btn" onclick="openTab(this,'c1-HTML')">HTML</button>-->
+</div>
+
+<!-- PREVIEW -->
+<div id="c1-preview" class="tab-panel active">
+  <div class="preview-box"><div class="containerrr">
+
+    <h1 class="title1">Button Colors</h1>
+
+  <div class="component-boxxxx">
+    <button class="btnn-default">Default</button>
+    <button class="btnn-Primary">Primary</button>
+    <button class="btnn-Secondary">Secondary</button>
+    <button class="btnn-Accent">Accent</button>
+    <button class="btnn-Info">Info</button>
+    <button class="btnn-Success">Success</button>
+    <button class="btnn-warning">warning</button>
+    <button class="btnn-Error">Error</button>
+  </div>
+
+    <h1 class="title1">Soft Button</h1>
+
+  <div class="component-boxxxx">
+    <button class="btnn-Soft-default">Default</button>
+    <button class="btnn-Soft-Primary">Primary</button>
+    <button class="btnn-Soft-Secondary">Secondary</button>
+    <button class="btnn-Soft-Accent">Accent</button>
+    <button class="btnn-Soft-Info">Info</button>
+    <button class="btnn-Soft-Success">Success</button>
+    <button class="btnn-Soft-warning">warning</button>
+    <button class="btnn-Soft-Error">Error</button>
+  </div>
+
+    <h1 class="title1">Outline Button</h1>
+
+  <div class="component-boxxxx">
+    <button class="btnn-Outline-default">Default</button>
+    <button class="btnn-Outline-Primary">Primary</button>
+    <button class="btnn-Outline-Secondary">Secondary</button>
+    <button class="btnn-Outline-Accent">Accent</button>
+    <button class="btnn-Outline-Info">Info</button>
+    <button class="btnn-Outline-Success">Success</button>
+    <button class="btnn-Outline-warning">warning</button>
+    <button class="btnn-Outline-Error">Error</button>
+  </div>
+  </div>
+      
+    <h1 class="title1">SUTH Color</h1>
+
+  <div class="component-boxxxx">
+    <button class="btnn-Orange">Orange</button>
+    <button class="btnn-Green">Green</button>
+  </div>
+
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c1-html" class="tab-panel">
+<pre class="code-box">
+<p class="ttitle">color button</p>
+    &lt;button class="btnn-default"&gt;Default&lt;/button&gt;
+    &lt;button class="btnn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="btnn-Secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button class="btnn-Accent"&gt;Accent&lt;/button&gt;
+    &lt;button class="btnn-Success"&gt;Success&lt;/button&gt;
+    &lt;button class="btnn-warning"&gt;warning&lt;/button&gt;
+    &lt;button class="btnn-Error"&gt;Error&lt;/button&gt;
+
+<p class="ttitle">sofe button</p>
+    &lt;button class="btnn-Soft-default"&gt;Default&lt;/button&gt;
+    &lt;button class="btnn-Soft-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="btnn-Soft-Secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button class="btnn-Soft-Accent"&gt;Accent&lt;/button&gt;
+    &lt;button class="btnn-Soft-Success"&gt;Success&lt;/button&gt;
+    &lt;button class="btnn-Soft-warning"&gt;warning&lt;/button&gt;
+    &lt;button class="btnn-Soft-Error"&gt;Error&lt;/button&gt;
+
+<p class="ttitle">online button</p>
+    &lt;button class="btnn-Outline-default"&gt;Default&lt;/button&gt;
+    &lt;button class="btnn-Outline-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="btnn-Outline-Secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button class="btnn-Outline-Accent"&gt;Accent&lt;/button&gt;
+    &lt;button class="btnn-Outline-Success"&gt;Success&lt;/button&gt;
+    &lt;button class="btnn-Outline-warning"&gt;warning&lt;/button&gt;
+    &lt;button class="btnn-Outline-Error"&gt;Error&lt;/button&gt;
+
+<p class="ttitle">suth color</p>
+    &lt;button class="btnn-Outline-Orenge"&gt;Orenge&lt;/button&gt;
+    &lt;button class="btnn-Outline-Green"&gt;Green&lt;/button&gt;
+    
+</pre>
+</div>
+
+<!-- sizes -->
+<div id="c1-sizes" class="tab-panel">
+<pre class="preview-box">
+
+<div class="btn-group8">
+  <button class="btn8 xsmall" data-copy>Xsmall</button>
+  <button class="btn8 small"  data-copy>Small</button>
+  <button class="btn8 medium" data-copy>Medium</button>
+  <button class="btn8 large"  data-copy>Large</button>
+</div>
+
+<div class="code-box">
+  class="btn8 xsmall"
+  class="btn8 small"
+  class="btn8 medium"
+  class="btn8 large"
+</div>
+
+</pre>
+</div>
+
+<!-- Html -->
+<!--<div id="c1-HTML" class="tab-panel">
+<pre class="code-box">
+
+  &lt;button class="btn8 xsmall" data-copy&gt;Xsmall&lt;/button&gt;
+  &lt;button class="btn8 small"  data-copy&gt;Small&lt;/button&gt;
+  &lt;button class="btn8 medium" data-copy&gt;Medium&lt;/button&gt;
+  &lt;button class="btn8 large"  data-copy&gt;Large&lt;/button&gt;
+
+</pre>
+</div>-->
+
+</section>
+
+<!--JavaScript-->
+
+<script>
+  document.querySelectorAll('.component-boxxxx button').forEach(button => {
+    button.style.cursor = 'pointer';
+
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const htmlCode = button.outerHTML;
+
+      navigator.clipboard.writeText(htmlCode).then(() => {
+        const oldText = button.innerText;
+        button.innerText = '✔ Copy Code';
+        button.style.opacity = '0.7';
+
+        setTimeout(() => {
+          button.innerText = oldText;
+          button.style.opacity = '1';
+        }, 800);
+      });
+    });
+  });
+</script>
+
+<script>
+  // Commented out - copyAll functionality disabled
+  // document.querySelectorAll('.component-boxxxx').forEach(box => {
+  //   const copyAll = document.createElement('button');
+  //   copyAll.innerText = 'Copy Component';
+  //   copyAll.style.marginLeft = '12px';
+  //   copyAll.style.padding = '6px 14px';
+  //   copyAll.style.borderRadius = '8px';
+  //   copyAll.style.border = '1px solid #ccc';
+  //   copyAll.style.cursor = 'pointer';
+  //
+  //   copyAll.addEventListener('click', (e) => {
+  //     e.stopPropagation();
+  //     navigator.clipboard.writeText(box.innerHTML);
+  //     alert('✅ Copy component group สำเร็จ');
+  //   });
+  //
+  //   box.appendChild(copyAll);
+  // });
+</script>
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  const originalText = btn.innerText;
+
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(btn.outerHTML.trim()).then(() => {
+
+      btn.classList.add('copied');
+      btn.innerText = '✔ Copy Code';
+
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerText = originalText;
+        btn.style.opacity = '1';
+      }, 800);
+    });
+  });
+});
+</script>
+
+
+<!--------------------------- COMPONENT 2 Color System ---------------------------------->
+
+<section id="component-2-colors">
+  <h2>Component 2 – Color System</h2>
+
+  <div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(this,'c12-preview')">Preview</button>
+    <!--<button class="tab-btn" onclick="openTab(this,'c12-html')">HTML</button>-->
+  </div>
+
+  <!-- PREVIEW -->
+  <div id="c12-preview" class="tab-panel active">
+    <div class="preview-box">
+    <div class="container">
+
+<h1 class="title1">ColorsSystem</h1>
+
+<div class="component-box">
+
+<div class="palette">
+
+  <div class="color-box">
+    <div class="color1" style="background:#DC0E0E;"></div>
+    <div class="colorr">(Error color)</div>
+    <div class="hex">#DC0E0E</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#FFC50F;"></div>
+    <div class="colorr">(warning color)</div>
+    <div class="hex">#FFC50F</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#41A67E;"></div>
+    <div class="colorr">(Success color)</div>
+    <div class="hex">#41A67E</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#33A1E0;"></div>
+    <div class="colorr">(Info color)</div>
+    <div class="hex">#33A1E0</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#4FB783;"></div>
+    <div class="colorr">(Accent color)</div>
+    <div class="hex">#4FB783</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#E83C91;"></div>
+    <div class="colorr">(Secondary color)</div>
+    <div class="hex">#E83C91</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#4635B1;"></div>
+    <div class="colorr">(Primary color)</div>
+    <div class="hex">#4635B1</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#D1D1D1;"></div>
+    <div class="colorr">(Default color)</div>
+    <div class="hex">#D1D1D1</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#E55A2A;"></div>
+    <div class="hex">#E55A2A</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#F7CAC9;"></div>
+    <div class="hex">#F7CAC9</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#F595C4;"></div>
+    <div class="hex">#F595C4</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#0E8B7E;"></div>
+    <div class="hex">#0E8B7E</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#A2E1DF;"></div>
+    <div class="hex">#A2E1DF</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#CEFFD3;"></div>
+    <div class="hex">#CEFFD3</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#A096DF;"></div>
+    <div class="hex">#A096DF</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#8FC9E9;"></div>
+    <div class="hex">#8FC9E9</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#C2E2FA;"></div>
+    <div class="hex">#C2E2FA</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#FFF5DA;"></div>
+    <div class="hex">#FFF5DA</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#000000;"></div>
+    <div class="hex">#000000</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#6F6F6F;"></div>
+    <div class="hex">#6F6F6F</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#7D7D7D;"></div>
+    <div class="hex">#7D7D7D</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#9EA7AA;"></div>
+    <div class="hex">#9EA7AA</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+</div>
+</div>
+
+  <h1 class="title1">OutlineColorSystem</h1>
+
+<div class="component-box">
+<div class="palette">
+
+  <div class="color-box">
+    <div class="color" style="border-color:#DC0E0E;"></div>
+    <div class="colorr">(Error color)</div>
+    <div class="hex">#DC0E0E</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#FFC50F;"></div>
+    <div class="colorr">(warning color)</div>
+    <div class="hex">#FFC50F</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#41A67E;"></div>
+    <div class="colorr">(Success color)</div>
+    <div class="hex">#41A67E</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#33A1E0;"></div>
+    <div class="colorr">(Info color)</div>
+    <div class="hex">#33A1E0</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#4FB7B3;"></div>
+    <div class="colorr">(Accent color)</div>
+    <div class="hex">#4FB7B3</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#E83C91;"></div>
+    <div class="colorr">(Secondary color)</div>
+    <div class="hex">#E83C91</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#4635B1;"></div>
+    <div class="colorr">(Primary color)</div>
+    <div class="hex">#4635B1</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#D1D1D1;"></div>
+    <div class="colorr">(Default color)</div>
+    <div class="hex">#D1D1D1</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#E55A2A;"></div>
+    <div class="hex">#E55A2A</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#F7CAC9;"></div>
+    <div class="hex">#F7CAC9</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#F595C4;"></div>
+    <div class="hex">#F595C4</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#0EBB7E;"></div>
+    <div class="hex">#0EBB7E</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#A2E1DF;"></div>
+    <div class="hex">#A2E1DF</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#CEFFD3;"></div>
+    <div class="hex">#CEFFD3</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#A096DF;"></div>
+    <div class="hex">#A096DF</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#8FC9E9;"></div>
+    <div class="hex">#8FC9E9</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#C2E2FA;"></div>
+    <div class="hex">#C2E2FA</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#FFF5DA;"></div>
+    <div class="hex">#FFF5DA</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#000000;"></div>
+    <div class="hex">#000000</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#6F6F6F;"></div>
+    <div class="hex">#6F6F6F</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#7D7D7D;"></div>
+    <div class="hex">#7D7D7D</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color" style="border-color:#9EA7AA;"></div>
+    <div class="hex">#9EA7AA</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+</div>
+</div>
+</div>
+
+    <h1 class="title1">SUTH Color</h1>
+
+<div class="component-box">
+
+<div class="palette">
+
+  <div class="color-box">
+    <div class="color1" style="background:#F05A23;"></div>
+    <div class="hex">#F05A23</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+  <div class="color-box">
+    <div class="color1" style="background:#356768;"></div>
+    <div class="hex">#356768</div>
+    <div class="opacity">opacity: 100</div>
+  </div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+  <!-- HTML -->
+<!--  <div id="c12-html" class="tab-panel">
+    <pre class="code-box">
+
+<p class="ttitle">Color System</p>
+      color - Default:     #D1D1D1;
+      color - primary:     #4635B1;
+      color - Secondary:   #E83C91;
+      color - Accent:      #4FB783;
+      color - Info:        #33A1E0;
+      color - Success:     #41A67E;
+      color - warning:     #FFC50F;
+      color - Error:       #DC0E0E;
+
+<p class="ttitle">SUTH Color</p>
+      color - Orange:    #F05A23;
+      color - Green:     #356768;
+</pre>
+</div>--> 
+</section>
+
+<script>
+function openTab(btn, tabId) {
+  const section = btn.closest('section');
+
+  section.querySelectorAll('.tab-btn')
+    .forEach(b => b.classList.remove('active'));
+
+  section.querySelectorAll('.tab-panel')
+    .forEach(p => p.classList.remove('active'));
+
+  btn.classList.add('active');
+  section.querySelector('#' + tabId).classList.add('active');
+}
+</script>
+
+<!---------------------------------------- COMPONENT 3 Chackbox --------------------------------------->
+<section id="component-3-checkbox">
+<h2>Component 3 – Checkbox</h2>
+<div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(this,'c3-preview')">Preview</button>
+    <button class="tab-btn" onclick="openTab(this,'c3-html')">HTML</button>
+    <button class="tab-btn" onclick="openTab(this,'c3-sizes')">Sizes</button>
+    <!--<button class="tab-btn" onclick="openTab(this,'c3-HTML')">HTML</button>-->
+</div>
+
+<!-- PREVIEW -->
+<div id="c3-preview" class="tab-panel active">
+  <div class="preview-box">
+        
+<div class="container">
+
+  <h1 class="title1">ChackBox</h1>
+
+<div class="component-box">
+ <div class="checkbox-group">
+
+  <div class="item" data-c="#6F6F6F">
+  <input id="cb_t1" type="checkbox">
+  <label for="cb_t1" style="--c: #6F6F6F;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Default</span>
+    </label>
+  </div>
+</div>
+</div>
+
+  <h1 class="title1">ChackBoxColor</h1>
+
+ <div class="component-box">
+
+  <div class="listt">
+
+  <div class="item" data-c="#000000">
+  <input id="cb1" type="checkbox">
+  <label for="cb1" style="--c: #000000;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Default</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#4635B1">
+  <input id="cb2" type="checkbox">
+  <label for="cb2" style="--c: #4635B1;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Primary</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#E83C91">
+  <input id="cb3" type="checkbox">
+  <label for="cb3" style="--c: #E83C91;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Secondary</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#4FB7B3">
+  <input id="cb4" type="checkbox">
+  <label for="cb4" style="--c: #4FB7B3;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Accent</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#33A1E0">
+  <input id="cb5" type="checkbox">
+  <label for="cb5" style="--c: #33A1E0;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Info</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#41A67E">
+  <input id="cb6" type="checkbox">
+  <label for="cb6" style="--c: #41A67E;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Success</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#FFC50F">
+  <input id="cb7" type="checkbox">
+  <label for="cb7" style="--c: #FFC50F;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">warning</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#DC0E0E">
+  <input id="cb8" type="checkbox">
+  <label for="cb8" style="--c: #DC0E0E;">
+    <span class="box" aria-hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+    </span>
+    <span class="label-default">Error</span>
+    </label>
+  </div>
+</div>
+</div>
+
+      <h1 class="title1">SUTColor</h1>
+
+ <div class="component-box">
+
+   <div class="listt">
+
+  <div class="item" data-c="#F05A23">
+    <input id="cb9" type="checkbox">
+    <label for="cb9" style="--c: #F05A23;">
+      <span class="box" aria-hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+      </span>
+      <span class="label-default">Orange</span>
+    </label>
+  </div>
+
+  <div class="item" data-c="#356768">
+    <input id="cb10" type="checkbox">
+    <label for="cb10" style="--c: #356768;">
+      <span class="box" aria-hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l4.5 4.5L19.5 6.5"/></svg>
+      </span>
+      <span class="label-default">Green</span>
+    </label>
+  </div>
+</div>
+ </div>
+
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c3-html" class="tab-panel">
+<pre class="code-box">
+
+  <p class="title-Default">Default</p>
+      &lt;div class="item" data-c="#000000"&gt;
+      &lt;input id="cb1" type="checkbox"&gt;
+      &lt;label for="cb1" style="--c: #000000;"&gt;
+      &lt;span class="box" aria-hidden&gt;
+      &lt;svg viewBox="0 0 24 24" aria-hidden="true"&gt;
+      &lt;path d="M4.5 12.5l4.5 4.5L19.5 6.5"/>&lt;/svg&gt;
+      &lt;/span&gt;
+
+  <p class="title-Primary">Primary</p>
+      &lt;div class="item" data-c="#4635B1"&gt;
+      &lt;label for="cb2" style="--c: #4635B1;"&gt;
+  <p class="title-Secondary">Secondary</p>
+      &lt;div class="item" data-c="#E83C91"&gt;
+      &lt;label for="cb3" style="--c: #E83C91;"&gt;
+  <p class="title-Accent">Accent</p>
+      &lt;div class="item" data-c="#4FB7B3"&gt;
+      &lt;label for="cb4" style="--c: #4FB7B3;"&gt;
+  <p class="title-Info">Info</p>
+      &lt;div class="item" data-c="#33A1E0"&gt;
+      &lt;label for="cb5" style="--c: #33A1E0;"&gt;
+  <p class="title-Success">Success</p>
+      &lt;div class="item" data-c="#41A67E"&gt;
+      &lt;label for="cb6" style="--c: #41A67E;"&gt;
+  <p class="title-Warning">Warning</p>
+      &lt;div class="item" data-c="#FFC50F"&gt;
+      &lt;label for="cb7" style="--c: #FFC50F;"&gt;
+  <p class="title-Error">Error</p>
+      &lt;div class="item" data-c="#DC0E0E"&gt;
+      &lt;label for="cb8" style="--c: #DC0E0E;"&gt;
+</pre>
+</div>
+
+<!-- sizes -->
+<div id="c3-sizes" class="tab-panel">
+<pre class="preview-box">
+
+<div class="ds-checkbox-copy">
+  <div class="ds-checkbox-copy__group">
+
+  <div class="ds-checkbox-copy__item">
+  <input type="checkbox" class="ds-checkbox-copy__input ds-xsmall" checked>
+  <button class="ds-checkbox-copy__btn" data-copy>
+    <svg viewBox="0 0 24 24" fill="none">
+    <rect x="9" y="9" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    <rect x="2" y="2" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    </button>
+    <!--<span class="label-default">xsmall</span>-->
+    <p class="title4">xsmall</p>
+    </div>
+
+    <div class="ds-checkbox-copy__item">
+    <input type="checkbox" class="ds-checkbox-copy__input ds-small" checked>
+    <button class="ds-checkbox-copy__btn" data-copy>
+      <svg viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      </button>
+      <!--<span class="label-default">small</span>-->
+      <p class="title4">small</p>
+      </div>
+
+    <div class="ds-checkbox-copy__item">
+    <input type="checkbox" class="ds-checkbox-copy__input ds-medium" checked>
+    <button class="ds-checkbox-copy__btn" data-copy>
+      <svg viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      </button>
+      <!--<span class="label-default">medium</span>-->
+      <p class="title4">medium</p>
+      </div>
+
+      <div class="ds-checkbox-copy__item">
+      <input type="checkbox" class="ds-checkbox-copy__input ds-large" checked>
+      <button class="ds-checkbox-copy__btn" data-copy>
+        <svg viewBox="0 0 24 24" fill="none">
+        <rect x="9" y="9" width="13" height="13" rx="2"
+          stroke="currentColor" stroke-width="1.5"/>
+        <rect x="2" y="2" width="13" height="13" rx="2"
+          stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        </button>
+        <!--<span class="label-default">large</span>-->
+        <p class="title4">large</p>
+        </div>
+
+  </div>
+
+<div class="code-box">
+  class="ds-checkbox-copy__input ds-xsmall" 
+  class="ds-checkbox-copy__input ds-small" 
+  class="ds-checkbox-copy__input ds-medium"
+  class="ds-checkbox-copy__input ds-large"
+</div>
+
+</div>
+
+</pre>
+</div>
+
+<!-- Html -->
+<!--<div id="c3-HTML" class="tab-panel">
+<pre class="code-box">
+
+  &lt;div class="ds-checkbox-copy__item"&gt;
+  &lt;input type="checkbox" class="ds-checkbox-copy__input ds-xsmall" checked&gt;
+  &lt;/div&gt;
+
+  &lt;div class="ds-checkbox-copy__item"&gt;
+  &lt;input type="checkbox" class="ds-checkbox-copy__input ds-small" checked&gt;
+  &lt;/div&gt;
+
+  &lt;div class="ds-checkbox-copy__item"&gt;
+  &lt;input type="checkbox" class="ds-checkbox-copy__input ds-medium" checked&gt;
+  &lt;/div&gt;
+
+  &lt;div class="ds-checkbox-copy__item"&gt;
+  &lt;input type="checkbox" class="ds-checkbox-copy__input ds-large" checked&gt;
+  &lt;/div&gt;
+
+</pre>
+</div>-->
+
+</section>
+
+<!--javascript-->
+
+<script>
+  const COPY_SVG = `
+  <svg viewBox="0 0 24 24"
+    width="18"
+    height="18"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+  <rect x="9" y="9" width="13" height="13" rx="2"/>
+  <rect x="3" y="3" width="13" height="13" rx="2"/>
+  </svg>
+  `;
+  function copyHTML(element) {
+    navigator.clipboard.writeText(element.outerHTML.trim())
+      .then(() => showToast('✔ Copied component'));
+  }
+  function showToast(text) {
+    const toast = document.createElement('div');
+    toast.innerText = text;
+    Object.assign(toast.style, {
+      position: 'fixed',
+      bottom: '24px',
+      right: '24px',
+      padding: '10px 16px',
+      background: '#000',
+      color: '#fff',
+      borderRadius: '8px',
+      fontSize: '14px',
+      zIndex: 9999
+    });
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 900);
+  }
+
+  function addInlineCopyButton(target, labelSelector) {
+    const label = target.querySelector(labelSelector);
+    if (!label) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Copy component');
+
+    Object.assign(btn.style, {
+      marginLeft: '6px',
+      padding: '2px',
+      border: 'none',
+      background: 'transparent',
+      cursor: 'pointer'
+    });
+
+    const icon = document.createElement('span');
+    icon.innerHTML = COPY_SVG;
+    icon.style.color = '#666';
+
+    btn.appendChild(icon);
+
+    btn.onmouseenter = () => icon.style.color = '#000';
+    btn.onmouseleave = () => icon.style.color = '#666';
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+      icon.innerHTML = '✔';
+      setTimeout(() => icon.innerHTML = COPY_SVG, 900);
+    };
+
+    label.appendChild(btn);
+  }
+
+  document.querySelectorAll('.checkbox').forEach(cb => {
+    addInlineCopyButton(cb, 'label');
+  });
+
+  document.querySelectorAll('.item').forEach(item => {
+    addInlineCopyButton(item, 'label');
+  });
+</script>
+
+<script>
+(() => {
+  const COPY_ICON = `
+    <svg viewBox="0 0 24 24" fill="none">
+    <rect x="9" y="9" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    <rect x="2" y="2" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    `;
+
+  const CHECK_ICON = `
+    <svg viewBox="0 0 24 24" fill="none">
+    <path d="M5 13l4 4L19 7"
+      stroke="currentColor" stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+    </svg>
+    `;
+
+  document.querySelectorAll('.ds-checkbox-copy [data-copy]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const component = btn.closest('.ds-checkbox-copy__item');
+  navigator.clipboard.writeText(component.innerHTML.trim()).then(() => {
+  btn.innerHTML = CHECK_ICON;
+    setTimeout(() => btn.innerHTML = COPY_ICON, 1000);
+            });
+        });
+    });
+})();
+</script>
+
+
+<!--------------------------------- COMPONENT 4 Toggle Switch --------------------------------->
+<section id="component-4-toggle">
+<h2>Component 4 – Toggle Switch</h2>
+<div class="tab-menu">
+  <button class="tab-btn active" onclick="openTab(this,'c4-preview')">Preview</button>
+  <button class="tab-btn" onclick="openTab(this,'c4-html')">HTML</button>
+  <button class="tab-btn" onclick="openTab(this,'c4-sizes')">Sizes</button>
+  <!--<button class="tab-btn" onclick="openTab(this,'c4-HTML')">HTML</button>-->
+</div>
+
+<!-- PREVIEW -->
+<div id="c4-preview" class="tab-panel active">
+  <div class="preview-box">
+        
+<div class="container">
+  <h1 class="title1">ToggleSwitch</h1>
+  <div class="component-box">
+
+<div class="toggle-row">
+  
+<label>
+  <span class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+  </span>
+  <span class="toggle-label">Default</span>
+</label>
+
+<!--<label style="margin-left: 25px;">
+  <span class="switch">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </span>
+  <span class="toggle-label">Checked</span>
+</label>
+
+<label style="margin-left: 25px;">
+  <span class="switch">
+  <input type="checkbox" disabled>
+  <span class="slider"></span>
+  </span>
+  <span class="toggle-label toggle-disabled">Disabled</span>
+</label>-->
+
+</div>
+</div>
+
+  <h1 class="title1">ToggleSwitchColors</h1>
+<div class="component-box">
+<div class="toggle-roww">
+<div class="row">
+  <label class="switch Primary">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">Primary</label>
+</div>
+
+<div class="row">
+  <label class="switch Secondary">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">Secondary</label>
+</div>
+
+<div class="row">
+  <label class="switch Accent">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">Accent</label>
+</div>
+
+<div class="row">
+  <label class="switch Info">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">Info</label>
+</div>
+
+<div class="row">
+  <label class="switch Success">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">Success</label>
+</div>
+
+<div class="row">
+  <label class="switch warning">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">warning</label>
+</div>
+
+<div class="row">
+  <label class="switch Error">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+  </label>
+  <label class="text">Error</label>
+</div>
+</div>
+</div>
+
+  <h1 class="title1">SUTColors</h1>
+<div class="component-box">
+
+<div class="toggle-roww">
+
+<div class="row">
+  <label class="switch orange">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+  <label class="text">orange</label>
+</div>
+
+<div class="row">
+  <label class="switch greenn">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+  <label class="text">green</label>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c4-html" class="tab-panel">
+<pre class="code-box">
+   
+  &lt;div class="row"&gt;
+  &lt;label class="switch Default"&gt;
+  &lt;input type="checkbox" checked&gt;
+  &lt;span class="slider">&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;label class="switch Primary"&gt;
+  &lt;label class="switch Secondary"&gt;
+  &lt;label class="switch Accent"&gt;
+  &lt;label class="switch Info"&gt;
+  &lt;label class="switch Success"&gt;
+  &lt;label class="switch warning"&gt;
+  &lt;label class="switch Error"&gt;
+
+</pre>
+</div>
+
+<!-- sizes -->
+<div id="c4-sizes" class="tab-panel">
+<pre class="preview-box">
+
+<div class="ds-toggle">
+
+<label class="ds-toggle__item ds-xsmall" data-copy>
+    <input type="checkbox">
+    <span class="ds-toggle__slider"></span>
+    <span class="ds-copy-wrap">
+      <button class="ds-copy" type="button" aria-label="Copy"></button>
+    </span>
+</label>
+
+  <p class="title3">xsmall</p>
+
+<label class="ds-toggle__item ds-small" data-copy>
+    <input type="checkbox">
+    <span class="ds-toggle__slider"></span>
+    <span class="ds-copy-wrap">
+      <button class="ds-copy" type="button" aria-label="Copy"></button>
+    </span>
+</label>
+
+<p class="title3">small</p>
+
+<label class="ds-toggle__item ds-medium" data-copy>
+    <input type="checkbox">
+    <span class="ds-toggle__slider"></span>
+    <span class="ds-copy-wrap">
+      <button class="ds-copy" type="button" aria-label="Copy"></button>
+    </span>
+</label>
+
+<p class="title3">medium</p>
+
+<label class="ds-toggle__item ds-large" data-copy>
+    <input type="checkbox">
+    <span class="ds-toggle__slider"></span>
+    <span class="ds-copy-wrap">
+      <button class="ds-copy" type="button" aria-label="Copy"></button>
+    </span>
+</label>
+
+<p class="title3">large</p>
+
+</div>
+
+<div class="code-box">
+  class="ds-toggle__item ds-xsmall"
+  class="ds-toggle__item ds-small"
+  class="ds-toggle__item ds-medium"
+  class="ds-toggle__item ds-large"
+</div>
+
+</pre>
+</div>
+
+<!-- Html -->
+<!--<div id="c4-HTML" class="tab-panel">
+<pre class="code-box">
+
+  &lt;label class="ds-toggle__item ds-xsmall" data-copy=""&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="ds-toggle__slider">&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;label class="ds-toggle__item ds-small" data-copy=""&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="ds-toggle__slider">&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;label class="ds-toggle__item ds-medium" data-copy=""&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="ds-toggle__slider">&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;label class="ds-toggle__item ds-large" data-copy=""&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="ds-toggle__slider">&lt;/span&gt;
+  &lt;/label&gt;
+
+</pre>
+</div>-->
+</section>
+
+<!--JavaScript-->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(element) {
+    const html = element.outerHTML.trim();
+    navigator.clipboard.writeText(html).then(() => {
+      showToast('✔ Copied component');
+    });
+  }
+
+  function showToast(text) {
+    const toast = document.createElement('div');
+    toast.innerText = text;
+    Object.assign(toast.style, {
+      position: 'fixed',
+      bottom: '24px',
+      right: '24px',
+      padding: '10px 16px',
+      background: '#000',
+      color: '#fff',
+      borderRadius: '8px',
+      fontSize: '14px',
+      zIndex: 9999
+    });
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 900);
+  }
+  // ===============================
+  // SVG ICON
+  // ===============================
+  const COPY__SVG = `
+  <svg viewBox="0 0 24 24"
+    width="16"
+    height="16"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+  <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+  <rect x="3" y="3" width="13" height="13" rx="2"></rect>
+  </svg>
+  `;
+
+  // ===============================
+  // Create inline Copy button (SVG)
+  // ===============================
+  function addCopyButtonInline(target, labelEl) {
+    if (!labelEl) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.innerHTML = COPY_SVG;
+
+    Object.assign(btn.style, {
+      marginLeft: '6px',
+      padding: '2px',
+      border: 'none',
+      background: 'transparent',
+      cursor: 'pointer',
+      opacity: '0.6',
+      verticalAlign: 'middle'
+    });
+
+    btn.onmouseenter = () => btn.style.opacity = '1';
+    btn.onmouseleave = () => btn.style.opacity = '0.6';
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+
+      // feedback
+      btn.innerHTML = '✔';
+      setTimeout(() => btn.innerHTML = COPY_SVG, 800);
+    };
+
+    labelEl.appendChild(btn);
+  }
+  // ===============================
+  // ToggleSwitch (Default / Checked / Disabled)
+  // ===============================
+  document.querySelectorAll('.toggle-row > label').forEach(label => {
+    const text = label.querySelector('.toggle-label');
+    addCopyButtonInline(label, text);
+  });
+  // ===============================
+  // ToggleSwitch Colors
+  // ===============================
+  document.querySelectorAll('.row').forEach(row => {
+    const text = row.querySelector('.text');
+    addCopyButtonInline(row, text);
+  });
+</script>
+
+<script>
+(() => {
+  const COPY_ICON = `
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  `;
+
+  const DONE_ICON = `
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M5 13l4 4L19 7"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  `;
+
+  document.querySelectorAll('[data-copy] .ds-copy').forEach(btn => {
+    btn.innerHTML = COPY_ICON;
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const item = btn.closest('[data-copy]');
+      if (!item) return;
+
+      navigator.clipboard.writeText(item.outerHTML.trim()).then(() => {
+        btn.innerHTML = DONE_ICON;
+        setTimeout(() => btn.innerHTML = COPY_ICON, 900);
+      });
+    });
+  });
+})();
+
+</script>
+
+
+<!----------------------------------- COMPONENT 5 ----------------------------------------->
+<section id="component-5-Navbar">
+<h2>Component 5 – Navbar</h2>
+<div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(this,'c5-preview')">Preview</button>
+    <button class="tab-btn" onclick="openTab(this,'c5-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c5-preview" class="tab-panel active">
+    <div class="preview-box">
+
+
+<div class="container">
+  
+<!------------------ NAVBAR 1-------------------->
+  <h1 class="title1">Navbar</h1>
+ <div class="component-box">
+  <div class="toggle-roww">
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+  <!--<h2 style="margin:0;">LOGO</h2>-->
+  </div>
+
+  <div class="nav-right">
+  <div class="nav-item"></div>
+
+<!-- DROPDOWN -->
+<div class="dropdown-container">
+  <div class="dropdown-btn">
+    Dropdown <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-menu" id="dropdown">
+  <div class="dropdown-item"><b>item 1</b></div>
+  <div class="dropdown-item"><b>item 2</b></div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<!-- SCRIPT Navbar-->
+<script>
+const btn = document.querySelector(".dropdown-btn");
+const menu = document.getElementById("dropdown");
+
+btn.addEventListener("click", () => {
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown-container")) {
+    menu.style.display = "none";
+  }
+});
+</script>
+</div>
+</div>
+
+<!------------------ NAVBAR 2-------------------->
+<div class="title-wrap1 copy-navbar2">
+  <!--<h1 class="title1">Navbar2</h1>-->
+</div>
+
+ <div class="component-box">
+  <div class="toggle-roww">
+
+<!-- NAVBAR -->
+<div class="navbar1">
+  <div class="logo">
+  <!--<h2 style="margin:0;">LOGO</h2>-->
+  </div>
+
+  <div class="nav-right1">
+  <div class="nav-item1"></div>
+
+<!-- DROPDOWN -->
+<div class="dropdown-container1">
+  <div class="dropdown-btn1">
+    Dropdown <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-menu1" id="dropdown1">
+  <div class="dropdown-item1"><b>item 1</b></div>
+  <div class="dropdown-item1"><b>item 2</b></div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<!-- SCRIPT Navbar-->
+<script>
+const dropdown1 = document.querySelector(".dropdown-btn1");
+const menu1 = document.getElementById("dropdown1");
+
+dropdown1.addEventListener("click", () => {
+  menu1.style.display = menu1.style.display === "block" ? "none" : "block";
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown-container1")) {
+    menu1.style.display = "none";
+  }
+});
+
+</script>
+
+<!-- ===============================
+     Copy Component Script
+================================ -->
+<script>
+function createCopyButton(target) {
+  const btn = document.createElement("button");
+  btn.className = "copyy-btn2";
+  btn.type = "button";
+
+  const copyIcon = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  `;
+
+  const checkIcon = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M5 13l4 4L19 7"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `;
+
+  btn.innerHTML = copyIcon;
+
+  btn.onclick = (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(target.outerHTML.trim()).then(() => {
+      btn.innerHTML = checkIcon;
+      setTimeout(() => btn.innerHTML = copyIcon, 1000);
+    });
+  };
+
+  return btn;
+}
+
+document.querySelectorAll(".copy-navbar2").forEach(wrapper => {
+  const btn = createCopyButton(
+    wrapper.nextElementSibling
+  );
+  wrapper.appendChild(btn);
+});
+
+</script>
+</div>
+</div>
+
+<!------------------ NAVBAR 3--------------------->
+<div class="title-wrap" dataa-copy>
+  <!--<h1 class="title1">Navbar3</h1>-->
+</div>
+
+ <div class="component-box">
+  <div class="toggle-roww">
+
+<!-- NAVBAR -->
+<div class="navbar2">
+  <div class="logo">
+  <!--<h2 style="margin:0;">LOGO</h2>-->
+  </div>
+
+  <div class="nav-right2">
+  <div class="nav-item2"></div>
+
+<!-- DROPDOWN -->
+<div class="dropdown-container2">
+  <div class="dropdown-btn2">
+    Dropdown <span class="arrow">▼</span>
+  </div>
+  <div class="dropdown-menu2" id="dropdown2">
+  <div class="dropdown-item2"><b>item 1</b></div>
+  <div class="dropdown-item2"><b>item 2</b></div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<!-- SCRIPT Navbar-->
+<script>
+const Dropdown2 = document.querySelector(".dropdown-btn2");
+const memu2 = document.getElementById("dropdown2");
+
+Dropdown2.addEventListener("click", () => {
+  memu2.style.display = memu2.style.display === "block" ? "none" : "block";
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown-container2")) {
+    memu2.style.display = "none";
+  }
+});
+
+</script>
+
+<!-- ===============================
+     Copy Component Script
+================================ -->
+<script>
+function createCopyButton(target) {
+  const btn = document.createElement("button");
+  btn.className = "copyy-btn2";
+  btn.type = "button";
+
+  const copyIcon = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  `;
+
+  const checkIcon = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M5 13l4 4L19 7"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `;
+
+  btn.innerHTML = copyIcon;
+
+  btn.onclick = (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(target.outerHTML.trim()).then(() => {
+      btn.innerHTML = checkIcon;
+      setTimeout(() => btn.innerHTML = copyIcon, 1000);
+    });
+  };
+
+  return btn;
+}
+
+document.querySelectorAll("[dataa-copy]").forEach(wrapper => {
+  const btn = createCopyButton(
+    wrapper.nextElementSibling
+  );
+  wrapper.appendChild(btn);
+});
+
+</script>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c5-html" class="tab-panel">
+<pre class="code-box">
+  
+<p class="ttitle">Navbar</p>
+&lt;div class="navbar"&gt;
+  &lt;div class="logo"&gt;
+  &lt;/div&gt;
+  &lt;div class="nav-right"&gt;
+  &lt;div class="nav-item"&gt;&lt;/div&gt;
+&lt;div class="dropdown-container"&gt;
+  &lt;div class="dropdown-btn"&gt;
+    Dropdown &lt;span class="arrow"&gt;▼&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="dropdown-menu" id="dropdown"&gt;
+  &lt;div class="dropdown-item"&gt;&lt;b&gt;item 1&lt;/b&gt;&lt;/div&gt;
+  &lt;div class="dropdown-item"&gt;&lt;b&gt;item 2&lt;/b&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class="navbar1"&gt;
+  &lt;div class="logo"&gt;&lt;/div&gt;
+  &lt;div class="nav-right1"&gt; &lt;div class="nav-item1"&gt;&lt;/div&gt;
+  &lt;div class="dropdown-container1"&gt;
+  &lt;div class="dropdown-btn1"&gt;Dropdown &lt;span class="arrow"&gt;▼&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="dropdown-menu1" id="dropdown1"&gt;
+    &lt;div class="dropdown-item1"&gt;&lt;b&gt;item 1&lt;/b&gt;&lt;/div&gt;
+    &lt;div class="dropdown-item1"&gt;&lt;b&gt;item 2&lt;/b&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class="navbar2"&gt;
+  &lt;div class="logo"&gt;&lt;/div&gt;
+  &lt;div class="nav-right2"&gt;
+  &lt;div class="nav-item2"&gt;&lt;/div&gt;
+  &lt;div class="dropdown-container2"&gt;
+  &lt;div class="dropdown-btn2"&gt; Dropdown &lt;span class="arrow"&gt;▼&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="dropdown-menu2" id="dropdown2"&gt;
+    &lt;div class="dropdown-item2"&gt;&lt;b&gt;item 1&lt;/b&gt;&lt;/div&gt;
+    &lt;div class="dropdown-item2"&gt;&lt;b&gt;item 2&lt;/b&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+
+<!---------------------------------- COMPONENT 6 Dropdown-search -------------------------------------->
+<section id="component-6-search-set">
+<h2>Component 6 – Search / Dropdown</h2>
+<div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(this,'c6-preview')">Preview</button>
+    <button class="tab-btn" onclick="openTab(this,'c6-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c6-preview" class="tab-panel active">
+  <div class="preview-box">
+
+<div class="container">
+
+  <h1 class="title1">Search</h1>
+
+<div class="component-box">
+<div class="toggle-roww">
+<div class="search-box round-0">
+  <input type="text" placeholder="Search">
+  <i><svg width="30" height="30" viewBox="0 0 24 24" fill="none" 
+    xmlns="http://www.w3.org/2000/svg">
+  <circle cx="11" cy="11" r="6" stroke="#9EA7AA" stroke-width="3"/>
+  <line x1="15.5" y1="15.5" x2="20" y2="20" 
+    stroke="#9EA7AA" stroke-width="3" stroke-linecap="round"/>
+</svg>
+</i>
+</div>
+
+<div class="search-box round-1">
+  <input type="text" placeholder="Search">
+  <i><svg width="30" height="30" viewBox="0 0 24 24" fill="none" 
+    xmlns="http://www.w3.org/2000/svg">
+  <circle cx="11" cy="11" r="6" stroke="#9EA7AA" stroke-width="3"/>
+  <line x1="15.5" y1="15.5" x2="20" y2="20" 
+    stroke="#9EA7AA" stroke-width="3" stroke-linecap="round"/>
+</svg></i>
+</div>
+
+<div class="search-box round-2">
+  <input type="text" placeholder="Search">
+  <i><svg width="30" height="30" viewBox="0 0 24 24" fill="none" 
+    xmlns="http://www.w3.org/2000/svg">
+  <circle cx="11" cy="11" r="6" stroke="#9EA7AA" stroke-width="3"/>
+  <line x1="15.5" y1="15.5" x2="20" y2="20" 
+    stroke="#9EA7AA" stroke-width="3" stroke-linecap="round"/>
+</svg></i>
+</div>
+</div>
+</div>
+
+  <h1 class="title1">Dropdown</h1>
+
+<div class="component-box">
+<div class="toggle-row">
+<div class="dropdown">
+  <input type="text" placeholder="Dropdown" id="d1Input" readonly>
+  <div class="dropdown-list" id="d1List">
+    <div class="dropdown-item">item 1</div>
+    <div class="dropdown-item">item 2</div>
+    <div class="dropdown-item">item 3</div>
+</div>
+</div>
+
+<!--SCRIPT Dropdown1-->
+<script>
+const d1Input = document.getElementById("d1Input");
+const d1List = document.getElementById("d1List");
+
+d1Input.addEventListener("click", () => {
+    d1List.style.display = d1List.style.display === "block" ? "none" : "block";
+});
+
+document.querySelectorAll("#d1List .dropdown-item").forEach(item => {
+    item.addEventListener("click", () => {
+      d1Input.value = item.textContent;
+      d1List.style.display = "none";
+    });
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) {
+      d1List.style.display = "none";
+    }
+});
+</script>
+
+<div class="dropdown">
+<input type="text" placeholder="Dropdown" id="dropdownInput" readonly>
+
+<div class="dropdown-listt" id="dropdownListt">
+  <div class="dropdown-item">item 1</div>
+  <div class="dropdown-item">item 2</div>
+  <div class="dropdown-item">item 3</div>
+  </div>
+</div>
+
+<!--SCRIPT Dropdown2-->
+<script>
+const input = document.getElementById("dropdownInput");
+const list = document.getElementById("dropdownListt");
+
+input.addEventListener("click", () => {
+  list.style.display = list.style.display === "block" ? "none" : "block";
+});
+
+document.querySelectorAll(".dropdown-item").forEach(item => {
+  item.addEventListener("click", () => {
+    input.value = item.textContent;
+    list.style.display = "none";
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".dropdown")) {
+    list.style.display = "none";
+  }
+});
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c6-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="ttitle">Search</p>
+   &lt;div class="search-box round-0"&gt;
+    &lt;input type="text" placeholder="Search"&gt;
+    &lt;i&gt;&lt;svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;circle cx="11" cy="11" r="6" stroke="#9EA7AA" stroke-width="3"&gt;&lt;/circle&gt;
+    &lt;line x1="15.5" y1="15.5" x2="20" y2="20" stroke="#9EA7AA" stroke-width="3" stroke-linecap="round"&gt;&lt;/line&gt;
+   &lt;/svg&gt; &lt;/i&gt; &lt;/div&gt;
+
+  &lt;div class="search-box round-1"&gt;
+  &lt;div class="search-box round-2"&gt;
+
+<p class="ttitle">dropdown</p>
+   &lt;div class="dropdown"&gt;
+    &lt;input type="text" placeholder="Search" id="dropdownInput" readonly&gt;
+    &lt;div class="dropdown-listt" id="dropdownListt"&gt;
+     &lt;div class="dropdown-item"&gt;item 1&lt;/div&gt;
+     &lt;div class="dropdown-item"&gt;item 2&lt;/div&gt;
+     &lt;div class="dropdown-item"&gt;item 3&lt;/div&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+<!--javaScript-->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(el) {
+    const html = el.outerHTML.trim();
+    navigator.clipboard.writeText(html).then(() => {
+      toast("✔ Copied component");
+    });
+  }
+
+  function toast(text) {
+    const t = document.createElement("div");
+    t.innerText = text;
+    Object.assign(t.style, {
+      position: "fixed",
+      bottom: "24px",
+      right: "24px",
+      background: "#000",
+      color: "#fff",
+      padding: "10px 16px",
+      borderRadius: "8px",
+      fontSize: "14px",
+      zIndex: 9999,
+      opacity: 0.9
+    });
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 900);
+  }
+  // ===============================
+  // SVG ICON
+  // ===============================
+  const COPY___SVG = `
+    <svg viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+    <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+    <rect x="3" y="3" width="13" height="13" rx="2"></rect>
+    </svg>
+  `;
+
+  function createCopyBtn(target) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.innerHTML = COPY_SVG;
+    btn.setAttribute("aria-label", "Copy component");
+
+  Object.assign(btn.style, {
+    marginLeft: "12px",
+    padding: "4px",
+    borderRadius: "6px",
+    border: "none",
+    background: "#fff",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    opacity: "0.6"
+    });
+
+    btn.onmouseenter = () => btn.style.opacity = "1";
+    btn.onmouseleave = () => btn.style.opacity = "0.6";
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+
+      // feedback
+      btn.innerHTML = "✔";
+      setTimeout(() => btn.innerHTML = COPY_SVG, 800);
+    };
+
+    return btn;
+  }
+  // ===============================
+  // Navbar
+  // ===============================
+  document.querySelectorAll(".navbar").forEach(navbar => {
+    const title = navbar.closest(".component-box")?.previousElementSibling;
+    if (title) title.appendChild(createCopyBtn(navbar));
+  });
+  
+  // ===============================
+  // Search
+  // ===============================
+  document.querySelectorAll(".search-box").forEach(box => {
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "flex-end";
+
+    const parent = box.parentNode;
+    parent.insertBefore(wrapper, box);
+
+    wrapper.appendChild(createCopyBtn(box));
+    wrapper.appendChild(box);
+  });
+  // ===============================
+  // Dropdown
+  // ===============================
+  document.querySelectorAll(".dropdown").forEach(dropdown => {
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "flex-end";
+
+    const parent = dropdown.parentNode;
+    parent.insertBefore(wrapper, dropdown);
+
+    wrapper.appendChild(createCopyBtn(dropdown));
+    wrapper.appendChild(dropdown);
+  });
+</script>
+
+<!------------- COMPONENT 7 Alerts------------->
+<section id="component-7-alerts">
+<h2>Component 7 – Alerts</h2>
+<div class="tab-menu">
+  <button class="tab-btn active" onclick="openTab(this,'c7-preview')">Preview</button>
+  <button class="tab-btn" onclick="openTab(this,'c7-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c7-preview" class="tab-panel active">
+  <div class="preview-box">
+  <div class="toggle-roww1">
+
+<!-- Success -->
+<div class="alert success">
+  <img class="alert-icon" src="./image/c1.png" /><div>
+  <div class="alert-title">Success Message</div>
+  </div>
+</div>
+
+<!-- Warning -->
+<div class="alert warning">
+  <img class="alert-icon" src="./image/c5.png" /><div>
+  <div class="alert-title">Warning Message</div>
+  </div>
+</div>
+
+<!-- Error -->
+<div class="alert error">
+  <img class="alert-icon" src="./image/c3.png" /><div>
+  <div class="alert-title">Error Message</div>
+  </div>
+</div>
+
+<!-- Info -->
+<div class="alert info">
+  <img class="alert-icon" src="./image/c4.png" /><div>
+  <div class="alert-title">Info Message</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c7-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="title-Success">Success</p>
+  &lt;div class="alert success"&gt;
+    &lt;img class="alert-icon" src="./image/c1.png" /&gt;&lt;div&gt;
+    &lt;div class="alert-title"&gt;Success Message&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+
+<p class="title-Warning">warning</p>
+  &lt;div class="alert warning"&gt;
+    &lt;img class="alert-icon" src="./image/c5.png" /&gt;&lt;div&gt;
+    &lt;div class="alert-title"&lt;Warning Message&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+
+<p class="title-Error">Error</p>
+  &lt;div class="alert error"&gt;
+    &lt;img class="alert-icon" src="./image/c3.png" /&gt;&lt;div&gt;
+    &lt;div class="alert-title"&lt;Error Message&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+
+<p class="title-Info">info</p>
+  &lt;div class="alert info"&gt;
+    &lt;img class="alert-icon" src="./image/c4.png" /&gt;&lt;div&gt;
+    &lt;div class="alert-title"&lt;Info Message&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+<!--JavaScript-->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(el) {
+    navigator.clipboard.writeText(el.outerHTML.trim()).then(() => {
+      toast("✔ Copied component");
+    });
+  }
+
+  function toast(text) {
+    const t = document.createElement("div");
+    t.innerText = text;
+    Object.assign(t.style, {
+      position: "fixed",
+      bottom: "24px",
+      right: "24px",
+      background: "#000",
+      color: "#fff",
+      padding: "10px 16px",
+      borderRadius: "8px",
+      fontSize: "14px",
+      zIndex: 9999
+    });
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 900);
+  }
+
+  // ===============================
+  // SVG ICON
+  // ===============================
+  const COPY____SVG = `
+    <svg viewBox="0 0 24 24" width="16" height="16"
+      fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+    <rect x="3" y="3" width="13" height="13" rx="2"></rect>
+    </svg>
+  `;
+
+  function createCopyBtn(target) {
+    const btn = document.createElement("button");
+    btn.innerHTML = COPY_SVG;
+
+    Object.assign(btn.style, {
+      marginBottom: "6px",
+      padding: "4px",
+      borderRadius: "6px",
+      border: "none",
+      background: "#fff",
+      cursor: "pointer",
+      opacity: "0.6"
+    });
+
+    btn.onmouseenter = () => btn.style.opacity = "1";
+    btn.onmouseleave = () => btn.style.opacity = "0.6";
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+
+      // feedback หลัง copy
+      btn.innerHTML = "✔";
+      setTimeout(() => {
+        btn.innerHTML = COPY_SVG;
+      }, 800);
+    };
+
+    return btn;
+  }
+  // ===============================
+  // Alerts (Copy อยู่ข้างบน)
+  // ===============================
+  document.querySelectorAll(".alert").forEach(alert => {
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "flex-start";
+    wrapper.style.marginBottom = "14px";
+
+    const parent = alert.parentNode;
+    parent.insertBefore(wrapper, alert);
+
+    wrapper.appendChild(createCopyBtn(alert));
+    wrapper.appendChild(alert);
+  });
+</script>
+
+<!------------------------------ COMPONENT 8 Pagination -------------------------------->
+<section id="component-8-pagination">
+<h2>Component 8 – Pagination</h2>
+<div class="tab-menu">
+  <button class="tab-btn active" onclick="openTab(this,'c8-preview')">Preview</button>
+  <button class="tab-btn" onclick="openTab(this,'c8-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c8-preview" class="tab-panel active">
+  <div class="preview-box">
+
+<div class="container">
+<div class="component-box">
+<div class="toggle-roww">
+<div class="pagination1">
+  <a>&laquo;</a>
+  <a>&lsaquo;</a>
+  <a class="active">1</a>
+  <a class="active">2</a>
+  <a class="active">3</a>
+  <a>&rsaquo;</a>
+  <a>&raquo;</a>
+</div>
+</div>
+</div>
+
+ <div class="component-box">
+
+<div class="toggle-roww">
+<div class="pagination2">
+
+<div class="prev">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+  <path d="M15 4L7 12L15 20" 
+    stroke="#9EA7AA" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
+  </svg>
+</div>
+
+  <div class="num1">1</div>
+  <div class="num1">2</div>
+  <div class="num1">3</div>
+  <div class="num1">4</div>
+  <div class="num1">5</div>
+
+<div class="next">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+  <path d="M9 6L15 12L9 18"
+    stroke="#9EA7AA"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round" />
+  </svg>
+</div>
+</div>
+</div>
+</div>
+
+  <div class="component-box">
+
+<div class="toggle-roww">
+<div class="pagination3">
+<div class="prev">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M19 12H5M11 6L5 12L11 18"
+    stroke="#9EA7AA"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round" />
+  </svg>
+</div>
+  <div class="active1">1</div>
+  <div class="num2">2</div>
+  <div class="num2">3</div>
+  <div class="num2">4</div>
+  <div class="num2">5</div>
+  <div class="next">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M5 12H19M13 6L19 12L13 18"
+    stroke="#E55A2A"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round" />
+  </svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c8-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="ttitle">pagination1</p>
+ &lt;div class="pagination1"&gt;
+  &lt;a>&laquo;&lt;/a&gt;
+  &lt;a class="active"&gt;1&lt;/a&gt;
+  &lt;a class="active"&gt;2&lt;/a&gt;
+  &lt;a class="active"&gt;3&lt;/a&gt;
+  &lt;a>&raquo;&lt;/a&gt;
+ &lt;/div&gt;
+
+<p class="ttitle">pagination2</p>
+ &lt;div class="pagination2"&gt;
+ &lt;div class="prev"&gt;
+  &lt;svg width="28" height="28" viewBox="0 0 24 24" fill="none"&gt;
+  &lt;path d="M15 4L7 12L15 20" 
+    stroke="#9EA7AA" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/&gt;
+  &lt;/svg&gt;
+ &lt;/div&gt;
+    &lt;div class="num1"&gt;1&lt;/div&gt;
+    &lt;div class="num1"&gt;2&lt;/div&gt;
+    &lt;div class="num1"&gt;3&lt;/div&gt;
+    &lt;div class="num1"&gt;4&lt;/div&gt;
+    &lt;div class="num1"&gt;5&lt;/div&gt;
+ &lt;div class="next"&gt;
+  &lt;svg width="28" height="28" viewBox="0 0 24 24" fill="none"&gt;
+  &lt;path d="M9 6L15 12L9 18"
+    stroke="#9EA7AA"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round" /&gt;
+  &lt;/svg&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+<p class="ttitle">pagination3</p>
+ &lt;div class="pagination3"&gt;
+  &lt;div class="prev"&gt;
+  &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"&gt;
+  &lt;path d="M19 12H5M11 6L5 12L11 18"
+    stroke="#9EA7AA"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round" /&gt;
+  &lt;/svg&gt;
+ &lt;/div&gt;
+  &lt;div class="active1"&gt;1&lt;/div&gt;
+  &lt;div class="num2"&gt;2&lt;/div&gt;
+  &lt;div class="num2"&gt;3&lt;/div&gt;
+  &lt;div class="num2"&gt;4&lt;/div&gt;
+  &lt;div class="num2"&gt;5&lt;/div&gt;
+  &lt;div class="next"&gt;
+  &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"&gt;
+  &lt;path d="M5 12H19M13 6L19 12L13 18"
+    stroke="#E55A2A"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round" /&gt;
+  &lt;/svg&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+<!--JavaScript-->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(el) {
+    navigator.clipboard.writeText(el.outerHTML.trim()).then(() => {
+      toast("✔ Copied component");
+    });
+  }
+
+  function toast(text) {
+    const t = document.createElement("div");
+    t.innerText = text;
+    Object.assign(t.style, {
+      position: "fixed",
+      bottom: "24px",
+      right: "24px",
+      background: "#000",
+      color: "#fff",
+      padding: "10px 16px",
+      borderRadius: "8px",
+      fontSize: "14px",
+      zIndex: 9999
+    });
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 900);
+  }
+  // ===============================
+  // Create Copy Button (SVG Icon)
+  // ===============================
+  function createCopyBtn(target) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Copy component");
+
+    Object.assign(btn.style, {
+      marginBottom: "6px",
+      padding: "2px",
+      border: "none",
+      background: "transparent",
+      cursor: "pointer",
+      opacity: "0.6"
+    });
+
+    // ===== SVG ICON =====
+    btn.innerHTML = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+    <rect x="9" y="9" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    <rect x="2" y="2" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    `;
+
+    // hover
+    btn.onmouseenter = () => btn.style.opacity = "1";
+    btn.onmouseleave = () => btn.style.opacity = "0.6";
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+
+      // feedback ✔
+    btn.innerHTML = `
+    <svg width="20" height="20" viewBox="0 0 24 24"
+      fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 13l4 4L19 7"
+      stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    `;
+
+      setTimeout(() => {
+    btn.innerHTML = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+    <rect x="9" y="9" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    <rect x="2" y="2" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    `;
+    }, 900);
+    };
+    return btn;
+  }
+
+  // ===============================
+  // Pagination (Copy อยู่ข้างบน)
+  // ===============================
+  document.querySelectorAll(
+    ".pagination1, .pagination2, .pagination3"
+  ).forEach(pagination => {
+
+    const wrapper = document.createElement("div");
+    Object.assign(wrapper.style, {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      marginBottom: "16px"
+    });
+
+    const parent = pagination.parentNode;
+    parent.insertBefore(wrapper, pagination);
+
+    wrapper.appendChild(createCopyBtn(pagination));
+    wrapper.appendChild(pagination);
+  });
+</script>
+
+<!------------------------------------ COMPONENT 9 Sign In ------------------------------------------>
+<section id="component-9-signin">
+<h2>Component 9 – Sign In</h2>
+<div class="tab-menu">
+  <button class="tab-btn active" onclick="openTab(this,'c9-preview')">Preview</button>
+  <button class="tab-btn" onclick="openTab(this,'c9-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c9-preview" class="tab-panel active">
+  <div class="preview-box">
+
+<div class="containers">
+<div class="component-boxs">
+<div class="container8">
+
+  <div class="logo">
+    <img src="./image/A1.png" alt="Logo">
+  </div>
+
+  <h6 class="titlee">sign In</h6>
+
+ <div class="input-boxxx">
+ <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#99A0A5" 
+  stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="6" y="10" width="36" height="28" rx="4" />
+ <path d="M6 14l18 14 18-14" />
+ </svg>
+ <input type="email" placeholder="Email address">
+ </div>
+ <div class="input-boxxx">
+ <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6f7a82" stroke-width="2">
+ <rect x="5" y="10" width="14" height="10" rx="2"/>
+ <path d="M8 10V7a4 4 0 018 0v3"/>
+ </svg>
+ <input type="password" id="password1" placeholder="Password">
+ <svg class="icon eye" id="togglePassword" viewBox="0 0 24 24" fill="none" 
+  stroke="#e85d2a" stroke-width="2">
+ <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+ <circle cx="12" cy="12" r="3"/>
+ </svg>
+ </div>
+  <button class="btn11">sign in</button>
+ </div>
+<script>
+  const pass = document.getElementById("password1");
+  const toggle = document.getElementById("togglePassword");
+  toggle.onclick = () => {
+  pass.type = pass.type === "password" ? "text" : "password";
+  };
+ </script>
+ </div>
+
+<div class="component-boxs">
+
+<div class="container7">
+
+  <div class="logo">
+  <img src="./image/A1.png" alt="Logo">
+  </div>
+
+<h6 class="titlee">sign In</h6>
+
+<div class="input-boxxx1">
+  <svg class="icon icon-left" viewBox="0 0 24 24" fill="none" stroke="#9aa3a8" stroke-width="2">
+    <rect x="8" y="2" width="8" height="8" rx="4"/>
+    <path d="M5 20v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/>
+  </svg>
+  <i class="fa-regular fa-user"></i>
+  <input type="text" placeholder="Username">
+</div>
+
+<div class="input-boxxx1">
+     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6f7a82" stroke-width="2">
+ <rect x="5" y="10" width="14" height="10" rx="2"/>
+ <path d="M8 10V7a4 4 0 018 0v3"/>
+ </svg>
+  <i class="fa-solid fa-lock"></i>
+  <input type="password" id="password2" placeholder="Password">
+  <svg class="icon eye" id="togglePassword" viewBox="0 0 24 24" fill="none" 
+    stroke="#e85d2a" stroke-width="2">
+  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+  <circle cx="12" cy="12" r="3"/>
+  </svg>
+  </div>
+<button class="btn10">sign in</button>
+</div>
+
+<script>
+function togglePassword() {
+  const pass = document.getElementById("password2");
+  pass.type = pass.type === "password" ? "text" : "password";
+}
+</script>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+</div>
+</div>    
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c9-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="ttitle">Signin1</p>
+ &lt;div class="container8"&gt;
+  &lt;div class="logo"&gt;
+    &lt;img src="./image/A1.png" alt="Logo"&gt;
+  &lt;/div&gt;
+ &lt;h6&gt;Sign In &lt;/h6&gt;
+  &lt;div class="input-boxxx"&gt;
+  &lt;svg class="icon" viewBox="0 0 48 48" fill="none" stroke="#99A0A5" 
+    stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"&gt;
+  &lt;rect x="6" y="10" width="36" height="28" rx="4" /&gt;
+  &lt;path d="M6 14l18 14 18-14" /&gt;
+  &lt;/svg&gt;
+  &lt;input type="email" placeholder="Email address"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-boxxx"&gt;
+  &lt;svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6f7a82" stroke-width="2"&gt;
+  &lt;rect x="5" y="10" width="14" height="10" rx="2"/&gt;
+  &lt;path d="M8 10V7a4 4 0 018 0v3"/&gt;
+  &lt;/svg&gt;
+  &lt;input type="password" id="password1" placeholder="Password"&gt;
+  &lt;svg class="icon eye" id="togglePassword" viewBox="0 0 24 24" fill="none" 
+    stroke="#e85d2a" stroke-width="2"&gt;
+  &lt;path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/&gt;
+  &lt;circle cx="12" cy="12" r="3"/&gt;
+  &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;button class="btn10"&gt;sing in&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+
+<p class="ttitle">Signin2</p>
+ &lt;div class="container7"&gt;
+  &lt;div class="logo"&gt;
+    &lt;img src="./image/A1.png" alt="Logo"&gt;
+  &lt;/div&gt;
+  &lt;h6&gt;Sign In&lt;/h6&gt;
+  &lt;div class="input-boxxx1"&gt;
+  &lt;i class="fa-regular fa-user"&gt;&lt;/i&gt;
+  &lt;input type="text" placeholder="Username"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-boxxx1"&gt;
+  &lt;i class="fa-solid fa-lock"&gt;&lt;/i&gt;
+  &lt;input type="password" id="password2" placeholder="Password"&gt;
+  &lt;svg class="icon eye" id="togglePassword" viewBox="0 0 24 24" fill="none" 
+    stroke="#e85d2a" stroke-width="2"&gt;
+  &lt;path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/&gt;
+  &lt;circle cx="12" cy="12" r="3"/&gt;
+  &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;button class="btn10">Sign In&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+
+</pre>
+</div>
+</section>
+
+<!--JavaScript-->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(el) {
+    navigator.clipboard.writeText(el.outerHTML.trim()).then(() => {
+      toast("✔ Copied component");
+    });
+  }
+
+  function toast(text) {
+  const t = document.createElement("div");
+  t.innerText = text;
+  Object.assign(t.style, {
+    position: "fixed",
+    bottom: "24px",
+    right: "24px",
+    background: "#000",
+    color: "#fff",
+    padding: "10px 16px",
+    borderRadius: "8px",
+    fontSize: "14px",
+    zIndex: 9999
+  });
+    document.body.appendChild(t);
+  setTimeout(() => t.remove(), 900);
+  }
+
+  // ===============================
+  // Create Copy Button (SVG)
+  // ===============================
+  function createCopyBtn(target) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Copy component");
+
+    Object.assign(btn.style, {
+      position: "absolute",
+      padding: "4px",
+      border: "none",
+      background: "transparent",
+      cursor: "pointer",
+      opacity: "0.6"
+    });
+
+const copyIcon = `
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+  <rect x="9" y="9" width="13" height="13" rx="2"
+    stroke="currentColor" stroke-width="1.5"/>
+  <rect x="2" y="2" width="13" height="13" rx="2"
+    stroke="currentColor" stroke-width="1.5"/>
+  </svg>
+  `;
+const checkIcon = `
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 13l4 4L19 7"
+    stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  `;
+    btn.innerHTML = copyIcon;
+    btn.onmouseenter = () => btn.style.opacity = "1";
+    btn.onmouseleave = () => btn.style.opacity = "0.6";
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+      btn.innerHTML = checkIcon;
+      setTimeout(() => (btn.innerHTML = copyIcon), 900);
+    };
+    return btn;
+  }
+  // ===============================
+  // Sign In Components (WORKING)
+  // ===============================
+  document.querySelectorAll(".container7, .container8").forEach(component => {
+    const title = component.querySelector("h5, h6");
+    if (!title) return;
+
+    component.style.position = "relative";
+    const btn = createCopyBtn(component);
+    const titleRect = title.getBoundingClientRect();
+    const parentRect = component.getBoundingClientRect();
+
+    btn.style.top =
+      titleRect.top - parentRect.top +
+      titleRect.height / 2 - 10 + "px";
+    btn.style.right = "0";
+
+    component.appendChild(btn);
+  });
+</script>
+
+<!---------------------------------------------- COMPONENT 10 Sign Up ----------------------------------->
+<section id="component-10-signup">
+<h2>Component 10 – Sign Up</h2>
+<div class="tab-menu">
+<button class="tab-btn active" onclick="openTab(this,'c10-preview')">Preview</button>
+<button class="tab-btn" onclick="openTab(this,'c10-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c10-preview" class="tab-panel active">
+<div class="preview-box">
+
+<div class="containerrrrrrr">
+<div class="component-boxxxxxxx"> 
+<div class="register-container2">
+
+  <div class="logo">
+  <img src="./image/A1.png" alt="Logo">
+  </div>
+
+  <h2>SignUp</h2>
+
+<form>
+  <div class="input-group2">
+    <label>Username :</label>
+    <input type="text" placeholder="Username">
+  </div>
+  <div class="input-group2">
+    <label>Password :</label>
+    <input type="password" placeholder="Password">
+  </div>
+  <div class="input-group2">
+    <label>First Name - Last Name :</label>
+    <input type="text" placeholder="First Name Last Name">
+  </div>
+  <div class="input-group2">
+    <label>Email :</label>
+    <input type="email" placeholder="Email">
+  </div>
+  <div class="input-group2">
+    <label>Phone number :</label>
+    <input type="text" placeholder="Phone number">
+  </div>
+    <button type="submit" class="submit-btn2">SignUp</button>
+  </form>
+</div>
+ </div>
+
+ <div class="component-boxxxxxxx">
+
+<div class="register-container3">
+
+  <div class="logo">
+  <img src="./image/A1.png" alt="Logo">
+  </div>
+
+  <h4>SignUp</h4>
+
+<form>
+  <div class="row-two3">
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email address">
+  </div>
+  <div class="input-group3">
+    <input type="password" placeholder="Password">
+  </div>
+  <div class="input-group3">
+    <input type="password" placeholder="Confirm Password">
+  </div>
+    <button type="submit3" class="submit-btn3">SignUp</button>
+  </form>
+</div>
+ </div>
+
+  <div class="component-boxxxxxxx">
+
+ <div class="register-container4">
+
+  <div class="logo">
+  <img src="./image/A1.png" alt="Logo">
+  </div>
+
+  <h5>SignUp</h5>
+
+ <form>
+ <div class="row-two4">
+ <div class="input-group4">
+    <label>First Name :</label>
+    <input type="text" placeholder=" First Name ">
+  </div>
+  <div class="input-group4">
+    <label>Last Name :</label>
+    <input type="text" placeholder="Last Name ">
+  </div>
+  </div>
+  <div class="input-group4">
+    <label>Phone number :</label>
+    <input type="text" placeholder="Phone number ">
+  </div>
+  <div class="input-group4">
+    <label>Email :</label>
+    <input type="email" placeholder="Email ">
+  </div>
+  <div class="input-group4">
+    <label>Password :</label>
+    <input type="password" placeholder="Password ">
+  </div>
+  <div class="input-group4">
+    <label>Confirm Password :</label>
+    <input type="password" placeholder="Confirm Password ">
+  </div>
+    <button type="submit" class="submit-btn4">SignUp</button>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c10-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="ttitle">Signup1</p>
+ &lt;div class="register-container2"&gt;
+  &lt;div class="logo"&gt;
+  &lt;img src="./image/A1.png" alt="Logo"&gt;
+  &lt;/div&gt;
+  &lt;h2&gt;SignUp&lt;/h2&gt;
+   &lt;form&gt;
+   &lt;div class="input-group2"&gt;
+    &lt;label>Username :&lt;/label&gt;
+    &lt;input type="text" placeholder="Username"&gt;
+   &lt;/div&gt;
+   &lt;div class="input-group2"&gt;
+    &lt;label&gt;Password :&lt;/label&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+   &lt;/div&gt;
+   &lt;div class="input-group2"&gt;
+    &lt;label&gt;First Name - Last Name :&lt;/label&gt;
+    &lt;input type="text" placeholder="First Name Last Name"&gt;
+   &lt;/div&gt;
+   &lt;div class="input-group2"&gt;
+    &lt;label&gt;Email :&lt;/label&gt;
+    &lt;input type="email" placeholder="Email"&gt;
+   &lt;/div&gt;
+   &lt;div class="input-group2"&gt;
+    &lt;label&gt;Phone number :&lt;/label&gt;
+    &lt;input type="text" placeholder="Phone number"&gt;
+   &lt;/div&gt;
+   &lt;button type="submit" class="submit-btn2">SignUp&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+<p class="ttitle">Signup2</p>
+ &lt;div class="register-container3"&gt;
+   &lt;div class="logo"&gt;
+    &lt;img src="./image/A1.png" alt="Logo"&gt;
+   &lt;/div&gt;
+  &lt;h4>SignUp&lt;/h4&gt;
+   &lt;form&gt;
+   &lt;div class="row-two3"&gt;
+    &lt;input type="text" placeholder="Username"&gt;
+    &lt;input type="email" placeholder="Email address"&gt;
+   &lt;/div&gt;
+   &lt;div class="input-group3"&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+    &lt;/div&gt;
+   &lt;div class="input-group3"&gt;
+    &lt;input type="password" placeholder="Confirm Password"&gt;
+   &lt;/div&gt;
+   &lt;button type="submit3" class="submit-btn3">SignUp&lt;/button&gt;
+    &lt;/form&gt;
+ &lt;/div&gt;
+
+<p class="ttitle">Signup3</p>
+ &lt;div class="register-container4"&gt;
+   &lt;div class="logo"&gt;
+    &lt;img src="./image/A1.png" alt="Logo"&gt;
+   &lt;/div&gt;
+   &lt;h5&gt;SignUp&lt;/h5&gt;
+   &lt;form&gt;
+  &lt;div class="row-two4"&gt;
+  &lt;div class="input-group4"&gt;
+   &lt;label&gt;First Name :&lt;/label&gt;
+   &lt;input type="text" placeholder=" First Name "&gt;
+  &lt;/div&gt;
+  &lt;div class="input-group4"&gt;
+   &lt;label&gt;Last Name :&lt;/label&gt;
+   &lt;input type="text" placeholder="Last Name "&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="input-group4"&gt;
+   &lt;label&gt;Phone number :&lt;/label&gt;
+   &lt;input type="text" placeholder="Phone number "&gt;
+  &lt;/div&gt;
+  &lt;div class="input-group4"&gt;
+   &lt;label&gt;Email :&lt;/label&gt;
+   &lt;input type="email" placeholder="Email "&gt;
+  &lt;/div&gt;
+  &lt;div class="input-group4"&gt;
+   &lt;label&gt;Password :&lt;/label&gt;
+   &lt;input type="password" placeholder="Password "&gt;
+  &lt;/div&gt;
+   &lt;div class="input-group4"&gt;
+   &lt;label&gt;Confirm Password :&lt;/label&gt;
+   &lt;input type="password" placeholder="Confirm Password "&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="submit-btn4">SignUp&lt;/button&gt;
+  &lt;/form&gt;
+ &lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+<!--JavaScript-->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(el) {
+    navigator.clipboard.writeText(el.outerHTML.trim()).then(() => {
+      toast("✔ Copied component");
+    });
+  }
+
+  function toast(text) {
+  const t = document.createElement("div");
+  t.innerText = text;
+  Object.assign(t.style, {
+    position: "fixed",
+    bottom: "24px",
+    right: "24px",
+    background: "#000",
+    color: "#fff",
+    padding: "10px 16px",
+    borderRadius: "8px",
+    fontSize: "14px",
+    zIndex: 9999
+  });
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 900);
+  }
+
+  // ===============================
+  // Create Copy Button (SVG ICON)
+  // ===============================
+  function createCopyBtn(target) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.setAttribute("aria-label", "Copy component");
+  Object.assign(btn.style, {
+    marginBottom: "8px",
+    padding: "4px",
+    border: "none",
+    background: "transparent",
+    cursor: "pointer",
+    opacity: "0.6"
+  });
+  const copyIcon = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+    <rect x="9" y="9" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    <rect x="2" y="2" width="13" height="13" rx="2"
+      stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    `;
+  const checkIcon = `
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 13l4 4L19 7"
+      stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    `;
+  btn.innerHTML = copyIcon;
+  btn.onmouseenter = () => (btn.style.opacity = "1");
+  btn.onmouseleave = () => (btn.style.opacity = "0.6");
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+    btn.innerHTML = checkIcon;
+      setTimeout(() => (btn.innerHTML = copyIcon), 900);
+    };
+    return btn;
+  }
+  // ===============================
+  // SignUp Components
+  // ===============================
+  document
+    .querySelectorAll(
+    ".register-container2, .register-container3, .register-container4"
+    )
+    .forEach(form => {
+      const wrapper = document.createElement("div");
+      wrapper.style.display = "flex";
+      wrapper.style.flexDirection = "column";
+      wrapper.style.alignItems = "flex-end";
+      wrapper.style.marginBottom = "24px";
+      const parent = form.parentNode;
+      parent.insertBefore(wrapper, form);
+      wrapper.appendChild(createCopyBtn(form));
+      wrapper.appendChild(form);
+    });
+</script>
+
+<!--------------------------------------- COMPONENT 11 --------------------------------------->
+<section id="component-11-form">
+<h2>Component 11 – form</h2>
+<div class="tab-menu">
+    <button class="tab-btn active" onclick="openTab(this,'c11-preview')">Preview</button>
+    <button class="tab-btn" onclick="openTab(this,'c11-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c11-preview" class="tab-panel active">
+    <div class="preview-box">
+
+    <div class="containerrrrrrrrr">
+
+    <!--form1-->
+
+    <div class="component-boxxxxxxxxx">
+
+   <!-- ===== COPY SCOPE ===== -->
+<div data-copy-scope>
+
+<form class="ds-form">
+  <!-- COPY ICON -->
+  <button class="copy-btn" type="button" aria-label="Copy component"></button>
+
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="email" class="form-control" placeholder="Email@gmail.com">
+  </div>
+
+  <div class="form-group">
+    <label>Example select</label>
+    <select class="form-control">
+      <option>item 1</option>
+      <option>item 2</option>
+      <option>item 3</option>
+      <option>item 4</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Example multiple select</label>
+    <select multiple class="form-control">
+      <option>text 1</option>
+      <option>text 2</option>
+      <option>text 3</option>
+      <option>text 4</option>
+      <option>text 5</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Example textarea</label>
+    <textarea class="form-control" rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label>Example file input</label>
+    <input type="file" class="form-control-file">
+  </div>
+</form>
+</div>
+</div>
+
+    <!--form2-->
+
+    <div class="component-boxxxxxxxxx">
+
+   <!-- ===== COPY SCOPE ===== -->
+<div class="copy-scope" data-copy-scope>
+
+  <button class="copy-btn" type="button" aria-label="Copy component"></button>
+
+  <div class="form-card">
+    <div class="form-title"></div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" placeholder="textarea">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" placeholder="textarea">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Phone number</label>
+      <input type="text" class="form-control" placeholder="000-0000000">
+    </div>
+
+    <div class="form-group">
+      <label>input date of birth</label>
+      <input type="text" class="form-control" placeholder="00/00/68">
+    </div>
+
+    <div class="form-group">
+      <label>gender</label>
+      <select class="form-control">
+        <option>-</option>
+        <option>man</option>
+        <option>woman</option>
+        <option>other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>residence</label>
+      <textarea class="form-control" placeholder="textarea"></textarea>
+    </div>
+
+    <button class="btn-submit">submit</button>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c11-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="ttitle">form1</p>
+  &lt;form class="ds-form"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label>Email address&lt;/label&gt;
+    &lt;input type="email" class="form-control" placeholder="Email@gmail.com"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label>Example select&lt;/label&gt;
+    &lt;select class="form-control"&gt;
+      &lt;option>item 1&lt;/option&gt;
+      &lt;option>item 2&lt;/option&gt;
+      &lt;option>item 3&lt;/option&gt;
+      &lt;option>item 4&lt;/option&gt;
+      &lt;option>item 5&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label&gt;Example multiple select&lt;/label&gt;
+    &lt;select multiple="" class="form-control"&gt;
+      &lt;option&gt;text 1&lt;/option&gt;
+      &lt;option&gt;text 2&lt;/option&gt;
+      &lt;option&gt;text 3&lt;/option&gt;
+      &lt;option&gt;text 4&lt;/option&gt;
+      &lt;option&gt;text 5&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label>Example textarea&lt;/label&gt;
+    &lt;textarea class="form-control" rows="3"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form-group"&gt;
+    &lt;label&gt;Example file input&lt;/label&gt;
+    &lt;input type="file" class="form-control-file"&gt;
+  &lt;/div&gt;
+  &lt;/form&gt;
+
+<p class="ttitle">form2</p>
+  &lt;div class="form-card"&gt;
+    &lt;div class="form-title"&gt;&lt;/div&gt;
+
+    &lt;div class="form-row"&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label&gt;ชื่อ&lt;/label&gt;
+        &lt;input type="text" class="form-control" placeholder="textarea"&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label&gt;นามสกุล&lt;/label&gt;
+        &lt;input type="text" class="form-control" placeholder="textarea"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;เบอร์โทร&lt;/label&gt;
+      &lt;input type="text" class="form-control" placeholder="000-0000000"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;วัน/เดือน/ปีเกิด&lt;/label&gt;
+      &lt;input type="text" class="form-control" placeholder="00/00/68"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;เพศ&lt;/label&gt;
+      &lt;select class="form-control"&gt;
+        &lt;option&gt;-&lt;/option&gt;
+        &lt;option&gt;ชาย&lt;/option&gt;
+        &lt;option&gt;หญิง&lt;/option&gt;
+        &lt;option&gt;อื่น ๆ&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label>ที่อยู่&lt;/label&gt;
+      &lt;textarea class="form-control" placeholder="textarea">&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;button class="btn-submit">submit&lt;/button&gt;
+  &lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+<!--JavaScript-->
+<!--javascript form1-->
+
+<script>
+(() => {
+  const ICON_COPY = `
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  `;
+
+  const ICON_DONE = `
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M5 13l4 4L19 7"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  `;
+
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.innerHTML = ICON_COPY;
+
+    btn.addEventListener('click', () => {
+      const scope = btn.closest('[data-copy-scope]');
+      const component = scope.querySelector('.ds-form');
+
+      navigator.clipboard.writeText(component.outerHTML).then(() => {
+        btn.innerHTML = ICON_DONE;
+        btn.classList.add('done');
+
+        setTimeout(() => {
+          btn.innerHTML = ICON_COPY;
+          btn.classList.remove('done');
+        }, 1000);
+      });
+    });
+  });
+})();
+</script>
+
+<!--javascript form2-->
+
+<script>
+(() => {
+  const COPY_ICON = `
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="9" y="9" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+      <rect x="2" y="2" width="13" height="13" rx="2"
+        stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  `;
+
+  const DONE_ICON = `
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M5 13l4 4L19 7"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  `;
+
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.innerHTML = COPY_ICON;
+
+    btn.addEventListener('click', () => {
+      const scope = btn.closest('[data-copy-scope]');
+      const component = scope.querySelector('.form-card');
+
+      navigator.clipboard.writeText(component.outerHTML).then(() => {
+        btn.innerHTML = DONE_ICON;
+        btn.classList.add('done');
+
+        setTimeout(() => {
+          btn.innerHTML = COPY_ICON;
+          btn.classList.remove('done');
+        }, 1000);
+      });
+    });
+  });
+})();
+</script>
+
+
+<!------------------------------------- COMPONENT 12 table ---------------------------------------->
+<section id="component-12-table">
+<h2>Component 12 – Table</h2>
+<div class="tab-menu">
+  <button class="tab-btn active" onclick="openTab(this,'c12-preview')">Preview</button>
+  <button class="tab-btn" onclick="openTab(this,'c12-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c12-preview" class="tab-panel active">
+<div class="preview-box">
+      
+<div class="containerss">
+
+  <!--Table1-->
+<div class="component-boxss">
+<table class="custom-table">
+  <thead>
+    <tr>
+    <th>Heading</th>
+    <th>Heading</th>
+    <th>Heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+  </tbody>
+</table>
+ </div>
+
+  <!--Table2-->
+<div class="component-boxss">
+<table class="rounded-table">
+  <thead>
+    <tr>
+    <th>Heading</th>
+    <th>Heading</th>
+    <th>Heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+    <tr>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    </tr>
+  </tbody>
+</table>
+
+ </div>
+
+  <!--Table3-->
+<div class="component-boxss">
+<table class="zz-table">
+  <tr class="zz-tr">
+    <th class="zz-th">Heading</th>
+    <th class="zz-th">Heading</th>
+    <th class="zz-th">Heading</th>
+  </tr>
+  <tr class="zz-tr">
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+  </tr>
+  <tr class="zz-tr">
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+  </tr>
+  <tr class="zz-tr">
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+  </tr>
+  <tr class="zz-tr">
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+    <td class="zz-td">content</td>
+  </tr>
+</table>
+ </div>
+
+  <!--Table4-->
+<div class="component-boxss">
+<table class="a-table">
+  <tr class="a-tr">
+    <th class="a-th">Heading</th>
+    <th class="a-th">Heading</th>
+    <th class="a-th">Heading</th>
+  </tr>
+  <tr class="a-tr">
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+  </tr>
+  <tr class="a-tr">
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+  </tr>
+  <tr class="a-tr">
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+  </tr>
+  <tr class="a-tr">
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+    <td class="a-td">content</td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c12-html" class="tab-panel">
+<pre class="code-box">
+
+<p class="ttitle">data table1</p>
+ &lt;div class="component-boxss"&gt;
+ &lt;table class="custom-table"&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th>Heading &lt;/th&gt;
+    &lt;th>Heading &lt;/th&gt;
+    &lt;th>Heading &lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+    &lt;td&gt;content &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+ &lt;/table&gt;
+ &lt;/div&gt;
+
+<p class="ttitle">data table2</p>
+ &lt;div class="component-boxss"&gt;
+  &lt;table class="rounded-table"&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Heading&lt;/th&gt;
+    &lt;th&gt;Heading&lt;/th&gt;
+    &lt;th&gt;Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/tbody&gt;
+ &lt;/table&gt;
+ &lt;/div&gt;
+
+<p class="ttitle">data table3</p>
+ &lt;div class="component-boxss"&gt;
+  &lt;table class="zz-table"&gt;
+  &lt;tr class="zz-tr"&gt;
+    &lt;th class="zz-th"&gt;Heading&lt;/th&gt;
+    &lt;th class="zz-th"&gt;Heading&lt;/th&gt;
+    &lt;th class="zz-th"&gt;Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr class="zz-tr"&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="zz-tr"&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="zz-tr"&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="zz-tr"&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+    &lt;td class="zz-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/table&gt;
+ &lt;/div&gt;
+
+<p class="ttitle">data table4</p>
+ &lt;div class="component-boxss"&gt;
+  &lt;table class="a-table"&gt;
+  &lt;tr class="a-tr"&gt;
+    &lt;th class="a-th"&gt;Heading&lt;/th&gt;
+    &lt;th class="a-th"&gt;Heading&lt;/th&gt;
+    &lt;th class="a-th"&gt;Heading&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr class="a-tr"&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="a-tr"&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="a-tr"&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="a-tr"&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+    &lt;td class="a-td"&gt;content&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/table&gt;
+ &lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+<!----------------------------------- COMPONENT 13 --------------------------------------->
+<section id="component-13-Data table">
+<h2>Component 13 – Data table</h2>
+<div class="tab-menu">
+  <button class="tab-btn active" onclick="openTab(this,'c13-preview')">Preview</button>
+  <button class="tab-btn" onclick="openTab(this,'c13-html')">HTML</button>
+</div>
+
+<!-- PREVIEW -->
+<div id="c13-preview" class="tab-panel active">
+<div class="preview-box">
+
+ 
+<div class="copy-wrap">
+<button class="copy-btnn" id="copyBtnn" onclick="copyTableComponent()"></button>
+</div>
+
+<div class="table-wrap">
+  <div class="table-controls">
+    <div>
+      <select id="entries">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+      </select>
+      entries per page
+    </div>
+
+    <div>
+      Search:
+      <input type="text" id="search">
+    </div>
+  </div>
+
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+        <th>date</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+
+<tbody id="tableBody">
+  <tr>
+    <td>1</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>content</td>
+    <td>content</td>
+    <td>content</td>
+    <td>0</td>
+    <td>2000-00-00</td>
+    <td>00000</td>
+  </tr>
+</tbody>
+
+  </table>
+
+  <div class="pagination">
+    <div id="info"></div>
+    <div class="pages" id="pages"></div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- HTML -->
+<div id="c13-html" class="tab-panel">
+<pre class="code-box">
+
+  
+&lt;div class="copy-wrap"&gt;
+&lt;button class="copy-btnn" id="copyBtnn" onclick="copyTableComponent()"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="table-wrap"&gt;
+  &lt;div class="table-controls"&gt;&lt;div&gt;
+    &lt;select id="entries"&gt;
+      &lt;option value="5"&gt;5&lt;/option&gt;
+      &lt;option value="10" selected>10&lt;/option&gt;
+  &lt;/select&gt;
+    entries per page
+  &lt;/div&gt;
+  &lt;div&gt;
+      Search:
+      &lt;input type="text" id="search"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;table id="dataTable"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Number&lt;/th&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Position&lt;/th&gt;
+        &lt;th&gt;Office&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;date&lt;/th&gt;
+        &lt;th&gt;Salary&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+&lt;tbody id="tableBody"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;6&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;9&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;10&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;content&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;2000-00-00&lt;/td&gt;
+    &lt;td&gt;00000&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+  &lt;div class="pagination"&gt;
+    &lt;div id="info"&gt;&lt;/div&gt;
+    &lt;div class="pages" id="pages"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+</div>
+</section>
+
+
+<!--------------------JavaScript--------------------->
+
+<script>
+  // ===============================
+  // Utils
+  // ===============================
+  function copyHTML(el) {
+    navigator.clipboard.writeText(el.outerHTML.trim()).then(() => {
+      toast("✔ Copied component");
+    });
+  }
+
+  function toast(text) {
+  const t = document.createElement("div");
+  t.innerText = text;
+  Object.assign(t.style, {
+    position: "fixed",
+    bottom: "24px",
+    right: "24px",
+    background: "#000",
+    color: "#fff",
+    padding: "10px 16px",
+    borderRadius: "8px",
+    fontSize: "14px",
+    zIndex: 9999
+  });
+    document.body.appendChild(t);
+  setTimeout(() => t.remove(), 900);
+  }
+  // ===============================
+  // Create Copy Button (SVG)
+  // ===============================
+  function createCopyBtn(target) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.setAttribute("aria-label", "Copy table");
+  Object.assign(btn.style, {
+    position: "absolute",
+    top: "-14px",
+    right: "0",
+    padding: "6px",
+    borderRadius: "8px",
+    border: "1px solid #d0d7de",
+    background: "#ffffff",
+    cursor: "pointer",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
+    zIndex: 20
+  });
+  const copyIcon = `
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+  <rect x="9" y="9" width="13" height="13" rx="2"
+    stroke="#333" stroke-width="1.5"/>
+  <rect x="2" y="2" width="13" height="13" rx="2"
+    stroke="#333" stroke-width="1.5"/>
+  </svg>
+  `;
+  const checkIcon = `
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 13l4 4L19 7"
+    stroke="#6F6F6F" stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+  </svg>
+  `;
+
+    btn.innerHTML = copyIcon;
+
+    btn.onmouseenter = () => (btn.style.background = "#f6f8fa");
+    btn.onmouseleave = () => (btn.style.background = "#ffffff");
+
+    btn.onclick = (e) => {
+      e.stopPropagation();
+      copyHTML(target);
+
+      btn.innerHTML = checkIcon;
+      setTimeout(() => (btn.innerHTML = copyIcon), 900);
+    };
+
+    return btn;
+  }
+
+  // ===============================
+  // Apply to ALL tables (FIXED)
+  // ===============================
+  document.querySelectorAll(".component-boxss table").forEach(table => {
+    const wrapper = table.parentElement;
+
+    // สำคัญมาก ❗
+  wrapper.style.position = "relative";
+
+    wrapper.appendChild(createCopyBtn(table));
+  });
+</script>
+
+<!---------------------- data table----------------------------->
+<script>
+let currentPage = 1;
+let perPage = 10;
+
+const tbody = document.getElementById("tableBody");
+const search = document.getElementById("search");
+const entries = document.getElementById("entries");
+const pages = document.getElementById("pages");
+const info = document.getElementById("info");
+
+let data = Array.from(tbody.querySelectorAll("tr")).map(tr =>
+  Array.from(tr.children).map(td => td.textContent)
+);
+
+let filtered = [...data];
+
+function render() {
+  tbody.innerHTML = "";
+
+  const start = (currentPage - 1) * perPage;
+  const rows = filtered.slice(start, start + perPage);
+
+  rows.forEach(r => {
+    const tr = document.createElement("tr");
+    r.forEach(c => {
+      const td = document.createElement("td");
+      td.textContent = c;
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+
+const totalPages = Math.ceil(filtered.length / perPage);
+pages.innerHTML = "";
+
+/* ปุ่มย้อนกลับ */
+const prevBtn = document.createElement("button");
+prevBtn.innerHTML = "&lsaquo;";
+prevBtn.disabled = currentPage === 1;
+prevBtn.onclick = () => {
+  if (currentPage > 1) {
+    currentPage--;
+    render();
+  }
+};
+pages.appendChild(prevBtn);
+
+/* ปุ่มตัวเลข */
+for (let i = 1; i <= totalPages; i++) {
+  const btn = document.createElement("button");
+  btn.textContent = i;
+  btn.className = i === currentPage ? "active" : "";
+  btn.onclick = () => {
+    currentPage = i;
+    render();
+  };
+  pages.appendChild(btn);
+}
+
+/* ปุ่มถัดไป */
+const nextBtn = document.createElement("button");
+nextBtn.innerHTML = "&rsaquo;";
+nextBtn.disabled = currentPage === totalPages;
+nextBtn.onclick = () => {
+  if (currentPage < totalPages) {
+    currentPage++;
+    render();
+  }
+};
+pages.appendChild(nextBtn);
+
+
+
+  info.textContent =
+    `Showing ${start + 1} to ${Math.min(start + perPage, filtered.length)} of ${filtered.length} entries`;
+}
+
+search.addEventListener("input", e => {
+  const q = e.target.value.toLowerCase();
+  filtered = data.filter(row =>
+    row.join(" ").toLowerCase().includes(q)
+  );
+  currentPage = 1;
+  render();
+});
+
+entries.addEventListener("change", e => {
+  perPage = +e.target.value;
+  currentPage = 1;
+  render();
+});
+
+render();
+</script>
+
+<script>
+const copyIcon = `
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect x="9" y="9" width="13" height="13" rx="2"
+      stroke="#333" stroke-width="1.5"/>
+    <rect x="2" y="2" width="13" height="13" rx="2"
+      stroke="#333" stroke-width="1.5"/>
+  </svg>
+`;
+
+const checkIcon = `
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 13l4 4L19 7"
+      stroke="#6F6F6F" stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+  </svg>
+`;
+
+function copyTableComponent() {
+  const component = document.querySelector('.table-wrap');
+  const btn = document.getElementById('copyBtnn');
+
+  if (!component || !btn) return;
+
+  navigator.clipboard.writeText(component.outerHTML).then(() => {
+    btn.innerHTML = checkIcon;
+
+    setTimeout(() => {
+      btn.innerHTML = copyIcon;
+    }, 1500);
+  });
+}
+</script>
+<script>
+const copyBtnnEl = document.getElementById('copyBtnn');
+if (copyBtnnEl) {
+  copyBtnnEl.innerHTML = copyIcon;
+}
+</script>
+
+
+</main>
+</div>
+
+<!---------------------- code sidebar ------------------------>
+<script>
+(function() {
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    if (!sidebar || !content || !toggleBtn) return;
+
+    // Mobile menu toggle
+    window.toggleSidebar = function() {
+        sidebar.classList.toggle('active');
+        if (window.innerWidth <= 768) {
+            // On mobile, prevent body scroll when menu is open
+            if (sidebar.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    };
+
+    window.hideSidebar = function() {
+        sidebar.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(e.target) && 
+                !toggleBtn.contains(e.target)) {
+                hideSidebar();
+            }
+        }
+    });
+
+    // Close sidebar on window resize if switching to desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close sidebar when clicking on sidebar links (mobile)
+    if (window.innerWidth <= 768) {
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                setTimeout(hideSidebar, 100);
+            });
+        });
+    }
+})();
+</script>
+
+
+<!-- ================= JavaScript Components ================= -->
+<script>
+function openTab(btn, id) {
+    const section = btn.closest('section');
+
+    section.querySelectorAll('.tab-btn')
+        .forEach(b => b.classList.remove('active'));
+
+    section.querySelectorAll('.tab-panel')
+        .forEach(p => p.classList.remove('active'));
+
+    btn.classList.add('active');
+    section.querySelector('#' + id).classList.add('active');
+}
+</script>
+
+
+</body>
+</html>
