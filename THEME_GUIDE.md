@@ -11,16 +11,18 @@ The design system now uses a **semantic variable approach** for theming. This me
 ## Theme Modes
 
 ### 1. Light Theme (Default)
+
 ```css
 :root {
   --text-primary: var(--slate-900);
   --bg-body: var(--slate-50);
-  --bg-surface: #FFFFFF;
+  --bg-surface: #ffffff;
   /* ... */
 }
 ```
 
 ### 2. Dark Theme (System Preference)
+
 ```css
 @media (prefers-color-scheme: dark) {
   :root {
@@ -33,6 +35,7 @@ The design system now uses a **semantic variable approach** for theming. This me
 ```
 
 ### 3. Dark Theme (Manual Override)
+
 ```css
 [data-theme="dark"] {
   /* Same as system preference */
@@ -42,65 +45,73 @@ The design system now uses a **semantic variable approach** for theming. This me
 ## Usage
 
 ### Automatic (System Preference)
+
 The theme automatically switches based on user's OS preference:
+
 ```css
 /* No action needed - automatic */
 ```
 
 ### Manual Toggle
+
 Toggle via JavaScript:
+
 ```javascript
 // Enable dark mode
-document.documentElement.setAttribute('data-theme', 'dark');
+document.documentElement.setAttribute("data-theme", "dark");
 
 // Enable light mode
-document.documentElement.setAttribute('data-theme', 'light');
+document.documentElement.setAttribute("data-theme", "light");
 
 // Remove override (back to system preference)
-document.documentElement.removeAttribute('data-theme');
+document.documentElement.removeAttribute("data-theme");
 ```
 
 ### Persist Theme
+
 ```javascript
 // Save preference
-localStorage.setItem('theme', 'dark');
+localStorage.setItem("theme", "dark");
 
 // Load preference
-const savedTheme = localStorage.getItem('theme');
+const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
-  document.documentElement.setAttribute('data-theme', savedTheme);
+  document.documentElement.setAttribute("data-theme", savedTheme);
 }
 ```
 
 ## Semantic Variables Reference
 
 ### Text Colors
-| Variable | Light | Dark |
-|----------|-------|------|
-| `--text-primary` | Slate 900 | Slate 100 |
+
+| Variable           | Light     | Dark      |
+| ------------------ | --------- | --------- |
+| `--text-primary`   | Slate 900 | Slate 100 |
 | `--text-secondary` | Slate 600 | Slate 400 |
-| `--text-muted` | Slate 500 | Slate 500 |
-| `--text-inverse` | White | Slate 900 |
+| `--text-muted`     | Slate 500 | Slate 500 |
+| `--text-inverse`   | White     | Slate 900 |
 
 ### Background Colors
-| Variable | Light | Dark |
-|----------|-------|------|
-| `--bg-body` | Slate 50 | Slate 950 |
-| `--bg-surface` | White | Slate 900 |
-| `--bg-elevated` | White | Slate 800 |
-| `--bg-sunken` | Slate 100 | Slate 950 |
+
+| Variable        | Light     | Dark      |
+| --------------- | --------- | --------- |
+| `--bg-body`     | Slate 50  | Slate 950 |
+| `--bg-surface`  | White     | Slate 900 |
+| `--bg-elevated` | White     | Slate 800 |
+| `--bg-sunken`   | Slate 100 | Slate 950 |
 
 ### Component Variables
-| Variable | Light | Dark |
-|----------|-------|------|
-| `--card-bg` | White | Slate 900 |
-| `--card-border` | Slate 200 | Slate 700 |
-| `--input-bg` | White | Slate 900 |
-| `--input-border` | Slate 300 | Slate 600 |
-| `--sidebar-bg` | White | Slate 900 |
-| `--navbar-bg` | White | Slate 900 |
-| `--modal-bg` | White | Slate 900 |
-| `--table-header-bg` | Slate 50 | Slate 800 |
+
+| Variable            | Light     | Dark      |
+| ------------------- | --------- | --------- |
+| `--card-bg`         | White     | Slate 900 |
+| `--card-border`     | Slate 200 | Slate 700 |
+| `--input-bg`        | White     | Slate 900 |
+| `--input-border`    | Slate 300 | Slate 600 |
+| `--sidebar-bg`      | White     | Slate 900 |
+| `--navbar-bg`       | White     | Slate 900 |
+| `--modal-bg`        | White     | Slate 900 |
+| `--table-header-bg` | Slate 50  | Slate 800 |
 
 ## Components Updated
 
@@ -126,27 +137,29 @@ All components now use semantic variables:
 ## Customizing Themes
 
 ### Override Specific Variables
+
 ```css
 :root {
   /* Custom primary color */
-  --primary-600: #0066CC;
-  
+  --primary-600: #0066cc;
+
   /* Custom card background in light mode */
-  --card-bg: #FAFAFA;
+  --card-bg: #fafafa;
 }
 
 [data-theme="dark"] {
   /* Custom card background in dark mode */
-  --card-bg: #1A1A2E;
+  --card-bg: #1a1a2e;
 }
 ```
 
 ### Adding a Custom Theme
+
 ```css
 [data-theme="custom"] {
   --text-primary: #333333;
-  --bg-body: #F5F5F5;
-  --card-bg: #FFFFFF;
+  --bg-body: #f5f5f5;
+  --card-bg: #ffffff;
   /* ... */
 }
 ```
@@ -154,31 +167,36 @@ All components now use semantic variables:
 ## Testing Themes
 
 ### Check Current Theme
+
 ```javascript
 // Check if dark mode is active
-const isDark = 
-  document.documentElement.getAttribute('data-theme') === 'dark' ||
-  (window.matchMedia && 
-   window.matchMedia('(prefers-color-scheme: dark)').matches);
+const isDark =
+  document.documentElement.getAttribute("data-theme") === "dark" ||
+  (window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches);
 ```
 
 ### Listen for System Theme Changes
+
 ```javascript
-window.matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', e => {
-    console.log('Dark mode:', e.matches);
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (e) => {
+    console.log("Dark mode:", e.matches);
   });
 ```
 
 ## Migration Notes
 
 ### Old Variable Names (Still Supported)
-| Old | New |
-|-----|-----|
-| `--bg-primary` | `--bg-surface` |
-| `--bg-secondary` | `--bg-body` |
+
+| Old              | New                      |
+| ---------------- | ------------------------ |
+| `--bg-primary`   | `--bg-surface`           |
+| `--bg-secondary` | `--bg-body`              |
 | `--border-color` | `--color-border-default` |
 
 ### Deprecated
+
 - Hardcoded color values in components
 - Component-specific dark mode overrides (replaced by semantic variables)

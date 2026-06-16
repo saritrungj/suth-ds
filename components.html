@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUTH DS — Theme-Adaptive Components</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="suth-ds.min.css" />
+    <style>
+      body {
+        margin: 0;
+        background: var(--bg-body);
+        color: var(--text);
+        font-family: var(--font-base);
+      }
+
+      .demo-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 24px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .demo-topbar h1 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .demo-topbar p {
+        margin: 4px 0 0;
+        font-size: 0.8125rem;
+        color: var(--text-muted);
+      }
+
+      .demo-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .demo-main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      .section-heading {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0 0 8px;
+        color: var(--text);
+      }
+
+      .section-lead {
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        margin: 0 0 20px;
+      }
+
+      .contrast-summary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .contrast-card {
+        padding: 14px 16px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        font-size: 0.8125rem;
+      }
+
+      .contrast-card strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text);
+      }
+
+      .contrast-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 3px 0;
+        color: var(--text-secondary);
+      }
+
+      .contrast-pass {
+        color: var(--success-600);
+        font-weight: 600;
+      }
+
+      .contrast-fail {
+        color: var(--error-600);
+        font-weight: 600;
+      }
+
+      .demo-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 960px) {
+        .demo-split {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .theme-panel {
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        border: 1px solid var(--border-strong);
+        box-shadow: var(--shadow-md);
+      }
+
+      .theme-panel-header {
+        padding: 14px 20px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-sunken);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .theme-panel-body {
+        padding: 20px;
+        background: var(--bg-body);
+      }
+
+      .comp-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .comp-stack .card {
+        overflow: hidden;
+      }
+
+      .comp-stack .card pre {
+        margin: 0;
+        border-radius: 0;
+        border-top: 1px solid var(--border);
+        max-height: 280px;
+      }
+
+      .preview-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .preview-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .state-label {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+      }
+
+      .state-group {
+        margin-bottom: 14px;
+      }
+
+      .state-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .demo-nav-wrap {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+
+      .demo-nav-wrap .navbar {
+        border-bottom: none;
+        box-shadow: none;
+      }
+
+      .panel-contrast {
+        font-size: 0.6875rem;
+        color: var(--text-muted);
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+      }
+
+      .mb-6 {
+        margin-bottom: 24px;
+      }
+
+      .mb-8 {
+        margin-bottom: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="demo-topbar">
+      <div>
+        <h1>Theme-Adaptive Components</h1>
+        <p>
+          Side-by-side contrast · copyable HTML · delete confirmation flow
+        </p>
+      </div>
+      <div class="demo-actions">
+        <span class="text-sm text-muted" id="globalThemeLabel">Global: light</span>
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          id="globalThemeToggle"
+        >
+          Toggle global theme
+        </button>
+        <a href="index.html" class="btn btn-ghost-primary btn-sm">← Docs</a>
+      </div>
+    </header>
+
+    <main class="demo-main">
+      <section class="contrast-summary" id="contrastSummary" aria-live="polite"></section>
+
+      <h2 class="section-heading">Live theme comparison</h2>
+      <p class="section-lead">
+        Scoped panels always show light and dark side by side, independent of the
+        global page theme.
+      </p>
+
+      <div class="demo-split">
+        <div class="theme-panel" data-theme="light" id="panelLight">
+          <div class="theme-panel-header">
+            <span>Light theme (scoped)</span>
+            <span class="badge badge-default badge-sm">data-theme="light"</span>
+          </div>
+          <div class="theme-panel-body" id="galleryLight"></div>
+        </div>
+
+        <div class="theme-panel" data-theme="dark" id="panelDark">
+          <div class="theme-panel-header">
+            <span>Dark theme (scoped)</span>
+            <span class="badge badge-default badge-sm">data-theme="dark"</span>
+          </div>
+          <div class="theme-panel-body" id="galleryDark"></div>
+        </div>
+      </div>
+
+      <h2 class="section-heading mb-6">Component reference (copy HTML)</h2>
+      <p class="section-lead">
+        All previews and snippets use classes from
+        <code>suth-ds.min.css</code>. Click Copy to grab the markup.
+      </p>
+
+      <div class="comp-stack mb-8">
+        <!-- Button -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Button</div>
+              <div class="card-subtitle">Primary, secondary, outline · all states</div>
+            </div>
+            <button
+              type="button"
+              class="btn-copy btn-copy-xs"
+              data-copy-target="copy-btn"
+              data-copy-label="Copy"
+              aria-label="Copy button HTML"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-btn-label">Copy</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="state-group">
+              <div class="state-label">Default</div>
+              <div class="preview-row">
+                <button type="button" class="btn btn-primary btn-sm">Primary</button>
+                <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+                <button type="button" class="btn btn-outline-primary btn-sm">Outline</button>
+                <button type="button" class="btn btn-danger btn-sm">Danger</button>
+              </div>
+            </div>
+            <div class="state-group">
+              <div class="state-label">Disabled</div>
+              <div class="preview-row">
+                <button type="button" class="btn btn-primary btn-sm" disabled>Disabled</button>
+                <button type="button" class="btn btn-secondary btn-sm" disabled>Disabled</button>
+              </div>
+            </div>
+          </div>
+          <pre id="copy-btn"><code>&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-primary"&gt;Outline&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Card</div>
+              <div class="card-subtitle">Surface elevation and states</div>
+            </div>
+            <button type="button" class="btn-copy btn-copy-xs" data-copy-target="copy-card" data-copy-label="Copy" aria-label="Copy card HTML">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-btn-label">Copy</span>
+            </button>
+          </div>
+          <div class="card-body preview-stack">
+            <div class="card card-elevated">
+              <div class="card-header"><div class="card-title">Default card</div></div>
+              <div class="card-body"><p class="text-secondary text-sm">Uses <code>card</code>, <code>card-header</code>, <code>card-body</code>.</p></div>
+            </div>
+            <div class="card card-interactive" tabindex="0">
+              <div class="card-body"><strong>Interactive</strong><p class="text-muted text-sm">Hover, focus, active</p></div>
+            </div>
+          </div>
+          <pre id="copy-card"><code>&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;div class="card-title"&gt;Title&lt;/div&gt;
+    &lt;div class="card-subtitle"&gt;Subtitle&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;Content&lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;button type="button" class="btn btn-primary btn-sm"&gt;Action&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!-- Input -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Input</div>
+              <div class="card-subtitle">Form controls and validation states</div>
+            </div>
+            <button type="button" class="btn-copy btn-copy-xs" data-copy-target="copy-input" data-copy-label="Copy" aria-label="Copy input HTML">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-btn-label">Copy</span>
+            </button>
+          </div>
+          <div class="card-body preview-stack" style="max-width: 360px">
+            <div class="form-group">
+              <label class="form-label" for="demo-input-default">Label</label>
+              <input id="demo-input-default" type="text" class="form-input" placeholder="Default input" />
+            </div>
+            <input type="text" class="form-input is-success" value="Valid value" aria-label="Valid input" />
+            <input type="text" class="form-input is-error" value="Invalid value" aria-label="Invalid input" />
+            <input type="text" class="form-input" placeholder="Disabled" disabled />
+          </div>
+          <pre id="copy-input"><code>&lt;div class="form-group"&gt;
+  &lt;label class="form-label" for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" class="form-input" placeholder="you@example.com" /&gt;
+  &lt;span class="form-hint"&gt;We'll never share your email.&lt;/span&gt;
+&lt;/div&gt;
+&lt;input type="text" class="form-input is-success" value="Valid" /&gt;
+&lt;input type="text" class="form-input is-error" value="Invalid" /&gt;
+&lt;input type="text" class="form-input" disabled placeholder="Disabled" /&gt;</code></pre>
+        </div>
+
+        <!-- Badge -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Badge</div>
+              <div class="card-subtitle">Status labels and variants</div>
+            </div>
+            <button type="button" class="btn-copy btn-copy-xs" data-copy-target="copy-badge" data-copy-label="Copy" aria-label="Copy badge HTML">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-btn-label">Copy</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="preview-row">
+              <span class="badge badge-primary">Primary</span>
+              <span class="badge badge-success">Success</span>
+              <span class="badge badge-warning">Warning</span>
+              <span class="badge badge-error">Error</span>
+              <span class="badge badge-info">Info</span>
+              <span class="badge badge-default">Default</span>
+            </div>
+          </div>
+          <pre id="copy-badge"><code>&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-error"&gt;Error&lt;/span&gt;
+&lt;span class="badge badge-info"&gt;Info&lt;/span&gt;
+&lt;span class="badge badge-default"&gt;Default&lt;/span&gt;</code></pre>
+        </div>
+
+        <!-- Nav -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Nav</div>
+              <div class="card-subtitle">Navbar and navigation links</div>
+            </div>
+            <button type="button" class="btn-copy btn-copy-xs" data-copy-target="copy-nav" data-copy-label="Copy" aria-label="Copy nav HTML">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-btn-label">Copy</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="demo-nav-wrap">
+              <nav class="navbar">
+                <a href="#" class="navbar-brand" onclick="return false">SUTH DS</a>
+                <ul class="navbar-nav">
+                  <li><a href="#" class="nav-link active" onclick="return false">Active</a></li>
+                  <li><a href="#" class="nav-link" onclick="return false">Components</a></li>
+                  <li><a href="#" class="nav-link is-disabled" aria-disabled="true" onclick="return false">Disabled</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <pre id="copy-nav"><code>&lt;nav class="navbar"&gt;
+  &lt;a href="#" class="navbar-brand"&gt;SUTH DS&lt;/a&gt;
+  &lt;ul class="navbar-nav"&gt;
+    &lt;li&gt;&lt;a href="#" class="nav-link active"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="nav-link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <!-- Modal + Delete flow -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Modal — Delete confirmation &amp; success</div>
+              <div class="card-subtitle">
+                Confirm delete, then show success on complete (no toast noise)
+              </div>
+            </div>
+            <button type="button" class="btn-copy btn-copy-xs" data-copy-target="copy-delete-modal" data-copy-label="Copy" aria-label="Copy delete modal HTML">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-btn-label">Copy</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="preview-row">
+              <button type="button" class="btn btn-danger btn-sm" onclick="SUTHDS.modal.open('modalDeleteConfirm')">
+                Open delete confirmation
+              </button>
+              <button type="button" class="btn btn-success btn-sm" onclick="SUTHDS.modal.open('modalDeleteSuccess')">
+                Preview success only
+              </button>
+            </div>
+          </div>
+          <pre id="copy-delete-modal"><code>&lt;!-- Delete confirmation --&gt;
+&lt;div class="modal-overlay" id="modalDeleteConfirm"&gt;
+  &lt;div class="modal modal-alert modal-sm" role="dialog" aria-modal="true" aria-labelledby="deleteTitle"&gt;
+    &lt;div class="modal-alert-icon error" aria-hidden="true"&gt;
+      &lt;svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"&gt;
+        &lt;polyline points="3 6 5 6 21 6"/&gt;
+        &lt;path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3 class="modal-title" id="deleteTitle"&gt;Delete record?&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      Are you sure you want to delete this record? This action cannot be undone.
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button type="button" class="btn btn-secondary" onclick="SUTHDS.modal.close('modalDeleteConfirm')"&gt;Cancel&lt;/button&gt;
+      &lt;button type="button" class="btn btn-danger" onclick="completeDelete()"&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Success on complete --&gt;
+&lt;div class="modal-overlay" id="modalDeleteSuccess"&gt;
+  &lt;div class="modal modal-alert modal-sm" role="dialog" aria-modal="true" aria-labelledby="successTitle"&gt;
+    &lt;div class="modal-alert-icon success" aria-hidden="true"&gt;
+      &lt;svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"&gt;
+        &lt;path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/&gt;
+        &lt;polyline points="22 4 12 14.01 9 11.01"/&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3 class="modal-title" id="successTitle"&gt;Deleted successfully&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;The record has been permanently removed.&lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button type="button" class="btn btn-success" onclick="SUTHDS.modal.close('modalDeleteSuccess')"&gt;Done&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </main>
+
+    <!-- Delete confirmation modal -->
+    <div class="modal-overlay" id="modalDeleteConfirm" role="presentation">
+      <div
+        class="modal modal-alert modal-sm"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="deleteTitle"
+      >
+        <div class="modal-alert-icon error" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6" />
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          </svg>
+        </div>
+        <div class="modal-header">
+          <h3 class="modal-title" id="deleteTitle">Delete record?</h3>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete this record? This action cannot be undone.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="SUTHDS.modal.close('modalDeleteConfirm')">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="completeDelete()">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success modal (shown after delete completes) -->
+    <div class="modal-overlay" id="modalDeleteSuccess" role="presentation">
+      <div
+        class="modal modal-alert modal-sm"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="successTitle"
+      >
+        <div class="modal-alert-icon success" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+        </div>
+        <div class="modal-header">
+          <h3 class="modal-title" id="successTitle">Deleted successfully</h3>
+        </div>
+        <div class="modal-body">
+          The record has been permanently removed.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-sm" onclick="SUTHDS.modal.close('modalDeleteSuccess')">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="suth-ds.min.js"></script>
+    <script>
+      function completeDelete() {
+        SUTHDS.modal.close("modalDeleteConfirm");
+        SUTHDS.modal.open("modalDeleteSuccess");
+      }
+
+      function galleryHTML() {
+        return `
+          <div class="state-group">
+            <div class="state-label">Button</div>
+            <div class="preview-row">
+              <button type="button" class="btn btn-primary btn-sm">Primary</button>
+              <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" disabled>Disabled</button>
+            </div>
+          </div>
+          <div class="state-group">
+            <div class="state-label">Card</div>
+            <div class="card"><div class="card-body text-sm">Surface + border</div></div>
+          </div>
+          <div class="state-group">
+            <div class="state-label">Input</div>
+            <input type="text" class="form-input" placeholder="Placeholder" />
+          </div>
+          <div class="state-group">
+            <div class="state-label">Badge</div>
+            <div class="preview-row">
+              <span class="badge badge-primary">Primary</span>
+              <span class="badge badge-success">Success</span>
+            </div>
+          </div>
+          <div class="state-group">
+            <div class="state-label">Nav</div>
+            <div class="demo-nav-wrap">
+              <nav class="navbar">
+                <span class="navbar-brand">SUTH</span>
+                <ul class="navbar-nav">
+                  <li><a href="#" class="nav-link active" onclick="return false">Active</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="state-group">
+            <div class="state-label">Modal</div>
+            <button type="button" class="btn btn-danger btn-xs" onclick="SUTHDS.modal.open('modalDeleteConfirm')">Delete flow</button>
+          </div>
+          <div class="panel-contrast" data-contrast-panel></div>
+        `;
+      }
+
+      document.getElementById("galleryLight").innerHTML = galleryHTML();
+      document.getElementById("galleryDark").innerHTML = galleryHTML();
+
+      function parseColor(str) {
+        const el = document.createElement("div");
+        el.style.color = str;
+        document.body.appendChild(el);
+        const rgb = getComputedStyle(el).color.match(/\d+/g).map(Number);
+        el.remove();
+        return rgb;
+      }
+
+      function luminance([r, g, b]) {
+        const ch = (c) => {
+          c /= 255;
+          return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+        };
+        return 0.2126 * ch(r) + 0.7152 * ch(g) + 0.0722 * ch(b);
+      }
+
+      function contrastRatio(fg, bg) {
+        const l1 = luminance(parseColor(fg));
+        const l2 = luminance(parseColor(bg));
+        const lighter = Math.max(l1, l2);
+        const darker = Math.min(l1, l2);
+        return (lighter + 0.05) / (darker + 0.05);
+      }
+
+      function readToken(panel, name) {
+        return getComputedStyle(panel).getPropertyValue(name).trim();
+      }
+
+      function auditPanel(panel, label) {
+        const pairs = [
+          { name: "Text on surface", fg: readToken(panel, "--text"), bg: readToken(panel, "--surface"), min: 4.5 },
+          { name: "Muted on surface", fg: readToken(panel, "--text-muted"), bg: readToken(panel, "--surface"), min: 4.5 },
+          { name: "Border on surface", fg: readToken(panel, "--border-strong"), bg: readToken(panel, "--surface"), min: 3.0 },
+          { name: "Accent on surface", fg: readToken(panel, "--accent"), bg: readToken(panel, "--surface"), min: 3.0 },
+        ];
+
+        const results = pairs.map((p) => {
+          const ratio = contrastRatio(p.fg, p.bg);
+          return { ...p, ratio, pass: ratio >= p.min };
+        });
+
+        const el = panel.querySelector("[data-contrast-panel]");
+        if (el) {
+          el.innerHTML =
+            "<strong>Live contrast</strong><br>" +
+            results
+              .map(
+                (r) =>
+                  `${r.name}: <span class="${r.pass ? "contrast-pass" : "contrast-fail"}">${r.ratio.toFixed(2)}:1 ${r.pass ? "AA" : "FAIL"}</span>`,
+              )
+              .join("<br>");
+        }
+
+        return { label, results };
+      }
+
+      function renderSummary() {
+        document.getElementById("contrastSummary").innerHTML = "";
+        const light = auditPanel(document.getElementById("panelLight"), "Light");
+        const dark = auditPanel(document.getElementById("panelDark"), "Dark");
+        const container = document.getElementById("contrastSummary");
+
+        [light, dark].forEach(({ label, results }) => {
+          const card = document.createElement("div");
+          card.className = "contrast-card";
+          card.innerHTML =
+            `<strong>${label} panel</strong>` +
+            results
+              .map(
+                (r) =>
+                  `<div class="contrast-row"><span>${r.name}</span><span class="${r.pass ? "contrast-pass" : "contrast-fail"}">${r.ratio.toFixed(2)}:1</span></div>`,
+              )
+              .join("");
+          container.appendChild(card);
+        });
+      }
+
+      function updateGlobalLabel() {
+        document.getElementById("globalThemeLabel").textContent =
+          `Global: ${SUTHDS.theme.current}`;
+      }
+
+      document.getElementById("globalThemeToggle").addEventListener("click", () => {
+        SUTHDS.theme.toggle();
+        updateGlobalLabel();
+      });
+
+      window.addEventListener("suth:themechange", () => {
+        updateGlobalLabel();
+        renderSummary();
+      });
+
+      renderSummary();
+      updateGlobalLabel();
+    </script>
+  </body>
+</html>
