@@ -147,8 +147,8 @@
 
   /* Text Colors */
   --text-primary: var(--slate-900);
-  --text-secondary: var(--slate-600);
-  --text-muted: var(--slate-500);
+  --text-secondary: var(--slate-700);
+  --text-muted: var(--slate-600);
   --text-inverse: #ffffff;
 
   /* Background Colors */
@@ -228,7 +228,9 @@
 
   /* Component: Accordion */
   --accordion-bg: #ffffff;
-  --accordion-header-hover: var(--slate-50);
+  --accordion-header-hover: var(--slate-100);
+  --accordion-header-active-bg: var(--slate-100);
+  --accordion-body-bg: var(--slate-50);
   --accordion-border: var(--slate-200);
 
   /* Component: Tab */
@@ -416,6 +418,8 @@
     /* Component: Accordion */
     --accordion-bg: var(--slate-900);
     --accordion-header-hover: var(--slate-800);
+    --accordion-header-active-bg: var(--slate-800);
+    --accordion-body-bg: var(--slate-950);
     --accordion-border: var(--slate-700);
 
     /* Component: Tab */
@@ -555,6 +559,8 @@
 
   --accordion-bg: var(--slate-900);
   --accordion-header-hover: var(--slate-800);
+  --accordion-header-active-bg: var(--slate-800);
+  --accordion-body-bg: var(--slate-950);
   --accordion-border: var(--slate-700);
 
   --tab-bg: transparent;
@@ -619,8 +625,8 @@
    ======================================== */
 [data-theme="light"] {
   --text-primary: var(--slate-900);
-  --text-secondary: var(--slate-600);
-  --text-muted: var(--slate-500);
+  --text-secondary: var(--slate-700);
+  --text-muted: var(--slate-600);
   --text-inverse: #ffffff;
 
   --bg-body: var(--slate-50);
@@ -686,7 +692,9 @@
   --badge-soft-text: var(--primary-700);
 
   --accordion-bg: #ffffff;
-  --accordion-header-hover: var(--slate-50);
+  --accordion-header-hover: var(--slate-100);
+  --accordion-header-active-bg: var(--slate-100);
+  --accordion-body-bg: var(--slate-50);
   --accordion-border: var(--slate-200);
 
   --tab-bg: transparent;
@@ -3263,12 +3271,15 @@ pre code {
 /* ACCORDION
    ======================================== */
 .accordion {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--accordion-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  background: var(--accordion-bg);
+  box-shadow: var(--shadow-xs);
 }
 
 .accordion-item {
+  background: var(--accordion-bg);
   border-bottom: 1px solid var(--accordion-border);
 }
 
@@ -3280,40 +3291,76 @@ pre code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-3);
   width: 100%;
   padding: var(--space-4) var(--space-5);
   font-family: inherit;
   font-size: 0.9375rem;
   font-weight: 500;
+  text-align: left;
   color: var(--text-primary);
   background: var(--accordion-bg);
   border: none;
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
-.accordion-header:hover {
+.accordion-header:hover:not(:disabled) {
   background: var(--accordion-header-hover);
 }
 
+.accordion-header:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+.accordion-header:active:not(:disabled) {
+  background: var(--accordion-header-hover);
+}
+
+.accordion-item.active > .accordion-header {
+  background: var(--accordion-header-active-bg);
+  font-weight: 600;
+}
+
+.accordion-item.active > .accordion-header:hover:not(:disabled) {
+  background: var(--accordion-header-active-bg);
+}
+
 .accordion-icon {
+  flex-shrink: 0;
+  color: var(--text-secondary);
   transition: transform var(--transition-base);
 }
 
 .accordion-item.active .accordion-icon {
   transform: rotate(180deg);
+  color: var(--accent);
 }
 
 .accordion-body {
   display: none;
-  padding: 0 var(--space-5) var(--space-4);
+  padding: var(--space-4) var(--space-5);
   font-size: 0.875rem;
+  line-height: 1.6;
   color: var(--text-secondary);
+  background: var(--accordion-body-bg);
+  border-top: 1px solid var(--accordion-border);
 }
 
 .accordion-item.active .accordion-body {
   display: block;
   animation: fadeIn var(--transition-slow) ease;
+}
+
+.accordion-item.is-disabled .accordion-header,
+.accordion-header:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* ========================================
@@ -3395,6 +3442,7 @@ pre code {
 }
 
 .avatar-group .avatar {
+  position: relative;
   border: 2px solid var(--bg-primary);
   margin-left: -8px;
 }
@@ -3403,8 +3451,35 @@ pre code {
   margin-left: 0;
 }
 
+.avatar-group .avatar:nth-child(1) {
+  z-index: 1;
+}
+.avatar-group .avatar:nth-child(2) {
+  z-index: 2;
+}
+.avatar-group .avatar:nth-child(3) {
+  z-index: 3;
+}
+.avatar-group .avatar:nth-child(4) {
+  z-index: 4;
+}
+.avatar-group .avatar:nth-child(5) {
+  z-index: 5;
+}
+.avatar-group .avatar:nth-child(n + 6) {
+  z-index: 6;
+}
+
 .avatar-status {
   position: relative;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.avatar-status img {
+  position: relative;
+  z-index: 0;
+  border-radius: 50%;
 }
 
 .avatar-status::after {
@@ -3417,6 +3492,8 @@ pre code {
   background: var(--success-500);
   border: 2px solid var(--bg-primary);
   border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .avatar-status.away::after {
@@ -4425,19 +4502,6 @@ pre code {
 [data-theme="dark"] .dropdown-item.active {
   background: var(--primary-900);
   color: var(--primary-300);
-}
-
-[data-theme="dark"] .accordion-header {
-  background: var(--slate-800);
-}
-
-[data-theme="dark"] .accordion-header:hover {
-  background: var(--slate-700);
-}
-
-[data-theme="dark"] .accordion-item {
-  background: var(--slate-800);
-  border-color: var(--slate-700);
 }
 
 [data-theme="dark"] .list-group-item {

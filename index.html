@@ -71,38 +71,18 @@
        DARK MODE SUPPORT FOR DOCUMENTATION
        ======================================== */
 
-      /* ========================================
-       COMPREHENSIVE DARK MODE OVERRIDES
-       ======================================== */
-      [data-theme="dark"] {
-        --bg-primary: var(--slate-900);
-        --bg-secondary: var(--slate-950);
-        --text-primary: var(--slate-100);
-        --text-secondary: var(--slate-400);
-        --text-muted: var(--slate-500);
-        --border-color: var(--slate-700);
-
-        /* UI surface colors for dark mode */
-        --ui-bg: var(--slate-900);
-        --ui-bg-elevated: var(--slate-800);
-        --ui-bg-sunken: var(--slate-950);
-        --ui-bg-overlay: rgba(255, 255, 255, 0.05);
-        --ui-bg-hover: var(--slate-800);
-        --ui-bg-active: rgba(37, 99, 235, 0.15);
+      /* Documentation UI surfaces — text/border tokens come from suth-ds.css */
+      :root {
+        --ui-bg: var(--surface);
+        --ui-bg-elevated: var(--surface-elevated);
+        --ui-bg-sunken: var(--surface-sunken);
+        --ui-bg-overlay: rgba(0, 0, 0, 0.03);
+        --ui-bg-hover: var(--table-row-hover);
+        --ui-bg-active: var(--sidebar-item-active-bg);
       }
 
-      /* Light mode UI surface defaults */
-      :root {
-        --text-primary: var(--slate-900);
-        --text-secondary: var(--slate-600);
-        --text-muted: var(--slate-500);
-        --border-color: var(--slate-200);
-        --ui-bg: #ffffff;
-        --ui-bg-elevated: var(--slate-50);
-        --ui-bg-sunken: var(--slate-100);
-        --ui-bg-overlay: rgba(0, 0, 0, 0.03);
-        --ui-bg-hover: var(--slate-100);
-        --ui-bg-active: var(--primary-50);
+      [data-theme="dark"] {
+        --ui-bg-overlay: rgba(255, 255, 255, 0.05);
       }
 
       /* Body */
@@ -159,7 +139,7 @@
       }
       [data-theme="dark"] .ds-component-code-header {
         background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-        border-bottom-color: var(--slate-700);
+        border-bottom-color: var(--border);
       }
 
       /* Alert Modals Dark Mode */
@@ -215,7 +195,7 @@
       [data-theme="dark"] .btn-copy:hover {
         background: var(--ui-bg-hover);
         color: var(--text-primary);
-        border-color: var(--slate-600);
+        border-color: var(--border);
       }
 
       /* Toast */
@@ -244,7 +224,7 @@
         border-color: var(--border-color);
       }
       [data-theme="dark"] .color-item:hover {
-        border-color: var(--slate-600);
+        border-color: var(--border);
       }
 
       /* Device preview bar */
@@ -261,11 +241,6 @@
       [data-theme="dark"] .device-btn.active {
         background: var(--ui-bg);
         color: var(--primary-400);
-      }
-
-      /* Accordion */
-      [data-theme="dark"] .accordion-enhanced .accordion-header:hover {
-        background: linear-gradient(to right, var(--slate-800), var(--ui-bg));
       }
 
       /* DataTables */
@@ -450,7 +425,7 @@
       .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
         opacity: 0.4;
         cursor: not-allowed;
-        background: var(--slate-100) !important;
+        background: var(--surface-sunken) !important;
       }
       .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
         transform: none;
@@ -476,7 +451,7 @@
         white-space: nowrap;
       }
       table.datatable thead th:hover {
-        background: var(--slate-50);
+        background: var(--surface-sunken);
         color: var(--primary-600);
       }
       table.datatable tbody td {
@@ -1122,7 +1097,7 @@
       .empty-icon {
         width: 80px;
         height: 80px;
-        background: var(--slate-100);
+        background: var(--surface-sunken);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -1160,7 +1135,7 @@
 
       /* Badge soft variant */
       .badge-soft {
-        background: var(--slate-100);
+        background: var(--surface-sunken);
         color: var(--text-secondary);
       }
 
@@ -1176,7 +1151,7 @@
         background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--slate-200);
+        border-bottom: 1px solid var(--border);
         z-index: 1000;
         display: flex;
         align-items: center;
@@ -1190,7 +1165,7 @@
 
       [data-theme="dark"] .ds-header {
         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        border-bottom-color: var(--slate-700);
+        border-bottom-color: var(--border);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
       }
 
@@ -1218,12 +1193,12 @@
         box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
         transition: var(--transition-smooth);
         background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
       }
 
       [data-theme="dark"] .ds-header-brand {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        border-color: var(--slate-600);
+        border-color: var(--border);
         box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
       }
 
@@ -1255,27 +1230,23 @@
       .ds-header-title-main {
         font-size: 1.15rem;
         font-weight: 700;
-        color: var(--slate-800);
+        color: var(--text-primary);
         letter-spacing: -0.01em;
         line-height: 1.2;
       }
 
       [data-theme="dark"] .ds-header-title-main {
-        color: var(--slate-100);
+        color: var(--text-primary);
       }
 
       .ds-header-title-sub {
         font-size: 0.8125rem;
         font-weight: 500;
-        color: var(--slate-500);
+        color: var(--text-secondary);
         display: flex;
         align-items: center;
         gap: 8px;
         letter-spacing: 0.01em;
-      }
-
-      [data-theme="dark"] .ds-header-title-sub {
-        color: var(--slate-400);
       }
 
       @media (max-width: 480px) {
@@ -1334,7 +1305,7 @@
         gap: 10px;
         background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         border-radius: 10px;
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
         transition: var(--transition-smooth);
         padding: 6px 12px;
       }
@@ -1347,7 +1318,7 @@
       .font-selector label {
         font-size: 0.75rem;
         font-weight: 600;
-        color: var(--slate-500);
+        color: var(--text-muted);
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
@@ -1356,9 +1327,9 @@
         padding: 6px 32px 6px 12px;
         font-size: 0.875rem;
         font-weight: 500;
-        color: var(--slate-700);
+        color: var(--text-primary);
         background: #ffffff;
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
         border-radius: 8px;
         cursor: pointer;
         appearance: none;
@@ -1376,17 +1347,17 @@
 
       [data-theme="dark"] .font-selector {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        border-color: var(--slate-600);
+        border-color: var(--border);
       }
 
       [data-theme="dark"] .font-selector label {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       [data-theme="dark"] .font-selector select {
         background: var(--slate-800);
-        border-color: var(--slate-600);
-        color: var(--slate-200);
+        border-color: var(--border);
+        color: var(--text-primary);
       }
 
       @media (max-width: 1024px) {
@@ -1400,13 +1371,13 @@
         width: 42px;
         height: 42px;
         border-radius: var(--radius-lg);
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
         background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: var(--slate-600);
+        color: var(--text-secondary);
         transition: var(--transition-smooth);
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
       }
@@ -1420,9 +1391,9 @@
       }
 
       [data-theme="dark"] .theme-toggle {
-        border-color: var(--slate-600);
+        border-color: var(--border);
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       [data-theme="dark"] .theme-toggle:hover {
@@ -1453,12 +1424,12 @@
         background: linear-gradient(135deg, var(--slate-800), var(--slate-900));
         transform: translateY(-1px);
         box-shadow: var(--shadow-md);
-        border-color: var(--slate-500);
+        border-color: var(--border);
       }
 
       [data-theme="dark"] .github-link {
         background: linear-gradient(135deg, var(--slate-600), var(--slate-700));
-        border-color: var(--slate-500);
+        border-color: var(--border);
       }
 
       [data-theme="dark"] .github-link:hover {
@@ -1480,12 +1451,12 @@
         width: 42px;
         height: 42px;
         border-radius: var(--radius-lg);
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
         background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: var(--slate-600);
+        color: var(--text-secondary);
         transition: var(--transition-smooth);
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
       }
@@ -1498,9 +1469,9 @@
       }
 
       [data-theme="dark"] .mobile-menu-toggle {
-        border-color: var(--slate-600);
+        border-color: var(--border);
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       [data-theme="dark"] .mobile-menu-toggle:hover {
@@ -1558,7 +1529,7 @@
 
       [data-theme="dark"] .ds-sidebar {
         background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-        border-right-color: var(--slate-700);
+        border-right-color: var(--border);
       }
 
       @media (max-width: 1024px) {
@@ -1598,7 +1569,7 @@
       .ds-nav-title {
         font-size: 0.75rem;
         font-weight: 700;
-        color: var(--slate-500);
+        color: var(--text-muted);
         text-transform: uppercase;
         letter-spacing: 0.1em;
         padding: 20px 12px 10px;
@@ -1608,7 +1579,7 @@
       }
 
       [data-theme="dark"] .ds-nav-title {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       .ds-nav-list {
@@ -1622,7 +1593,7 @@
         padding: 12px 14px;
         font-size: 0.9375rem;
         font-weight: 500;
-        color: var(--slate-600);
+        color: var(--text-secondary);
         text-decoration: none;
         border-radius: 10px;
         transition: var(--transition-smooth);
@@ -1632,7 +1603,7 @@
       }
 
       [data-theme="dark"] .ds-nav-link {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       .ds-nav-link::before {
@@ -1713,11 +1684,11 @@
         justify-content: center;
         opacity: 0.8;
         transition: var(--transition-smooth);
-        color: var(--slate-500);
+        color: var(--text-muted);
       }
 
       [data-theme="dark"] .ds-nav-icon {
-        color: var(--slate-500);
+        color: var(--text-muted);
       }
 
       .ds-nav-link:hover .ds-nav-icon,
@@ -1757,28 +1728,28 @@
       /* Search in sidebar */
       .sidebar-search {
         padding: 20px 16px;
-        border-bottom: 1px solid var(--slate-200);
+        border-bottom: 1px solid var(--border);
         background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
       }
 
       [data-theme="dark"] .sidebar-search {
         background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-        border-bottom-color: var(--slate-700);
+        border-bottom-color: var(--border);
       }
 
       .sidebar-search-input {
         width: 100%;
         padding: 12px 16px 12px 42px;
         font-size: 0.9375rem;
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
         border-radius: 10px;
         background: #ffffff;
         transition: var(--transition-smooth);
-        color: var(--slate-700);
+        color: var(--text-primary);
       }
 
       .sidebar-search-input::placeholder {
-        color: var(--slate-400);
+        color: var(--input-placeholder);
       }
 
       .sidebar-search-input:focus {
@@ -1790,12 +1761,12 @@
 
       [data-theme="dark"] .sidebar-search-input {
         background: var(--slate-800);
-        border-color: var(--slate-600);
-        color: var(--slate-200);
+        border-color: var(--border);
+        color: var(--text-primary);
       }
 
       [data-theme="dark"] .sidebar-search-input::placeholder {
-        color: var(--slate-500);
+        color: var(--input-placeholder);
       }
 
       [data-theme="dark"] .sidebar-search-input:focus {
@@ -1813,7 +1784,7 @@
         left: 14px;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       /* ========================================
@@ -2023,14 +1994,14 @@
       .ds-section-title {
         font-size: 1.875rem;
         font-weight: 700;
-        color: var(--slate-800);
+        color: var(--text-primary);
         display: flex;
         align-items: center;
         gap: 12px;
       }
 
       [data-theme="dark"] .ds-section-title {
-        color: var(--slate-100);
+        color: var(--text-primary);
       }
 
       .ds-section-title::before {
@@ -2053,13 +2024,13 @@
 
       .ds-section-desc {
         font-size: 1rem;
-        color: var(--slate-600);
+        color: var(--text-secondary);
         margin-top: 8px;
         max-width: 600px;
       }
 
       [data-theme="dark"] .ds-section-desc {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       .ds-section-badge {
@@ -2091,7 +2062,7 @@
       .ds-component {
         background: #ffffff;
         border-radius: var(--radius-xl);
-        border: 1px solid var(--slate-200);
+        border: 1px solid var(--border);
         margin-bottom: 32px;
         overflow: hidden;
         transition: var(--transition-smooth);
@@ -2104,18 +2075,18 @@
         box-shadow:
           0 10px 25px -5px rgba(0, 0, 0, 0.1),
           0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        border-color: var(--slate-300);
+        border-color: var(--border);
         transform: translateY(-2px);
       }
 
       [data-theme="dark"] .ds-component {
         background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
-        border-color: var(--slate-700);
+        border-color: var(--border);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
       }
 
       [data-theme="dark"] .ds-component:hover {
-        border-color: var(--slate-600);
+        border-color: var(--border);
         box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
       }
 
@@ -2133,13 +2104,13 @@
         gap: 16px;
         padding: 20px 24px;
         background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-        border-bottom: 1px solid var(--slate-200);
+        border-bottom: 1px solid var(--border);
         flex-wrap: wrap;
       }
 
       [data-theme="dark"] .ds-component-header {
         background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-        border-bottom-color: var(--slate-700);
+        border-bottom-color: var(--border);
       }
 
       @media (max-width: 640px) {
@@ -2151,14 +2122,14 @@
       .ds-component-title {
         font-size: 1rem;
         font-weight: 600;
-        color: var(--slate-800);
+        color: var(--text-primary);
         display: flex;
         align-items: center;
         gap: 8px;
       }
 
       [data-theme="dark"] .ds-component-title {
-        color: var(--slate-100);
+        color: var(--text-primary);
       }
 
       .ds-component-actions {
@@ -2221,7 +2192,7 @@
       .ds-component-code-lang {
         font-size: 0.75rem;
         font-weight: 600;
-        color: var(--slate-400);
+        color: var(--pre-text);
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
@@ -2230,7 +2201,7 @@
         margin: 0;
         padding: 20px 24px;
         background: transparent;
-        color: var(--slate-300);
+        color: var(--pre-text);
         font-size: 0.8125rem;
         line-height: 1.7;
         overflow-x: auto;
@@ -2262,7 +2233,7 @@
         color: #a3e635;
       }
       .token-comment {
-        color: #6b7280;
+        color: #9ca3af;
       }
 
       /* Dark mode syntax highlighting */
@@ -2349,7 +2320,7 @@
       .color-item:hover {
         transform: translateY(-4px) scale(1.02);
         box-shadow: var(--shadow-xl);
-        border-color: var(--slate-300);
+        border-color: var(--border);
       }
 
       .color-preview {
@@ -2429,7 +2400,7 @@
       .btn-copy:hover {
         background: var(--ui-bg-elevated);
         color: var(--text-primary);
-        border-color: var(--slate-300);
+        border-color: var(--border);
       }
 
       .btn-copy.copied {
@@ -2792,7 +2763,7 @@
         display: flex;
         gap: 8px;
         padding: 8px;
-        background: var(--slate-100);
+        background: var(--surface-sunken);
         border-radius: var(--radius-lg);
         margin-bottom: 20px;
       }
@@ -3034,36 +3005,13 @@
       }
 
       .table-responsive-wrapper::-webkit-scrollbar-track {
-        background: var(--slate-100);
+        background: var(--surface-sunken);
         border-radius: 4px;
       }
 
       .table-responsive-wrapper::-webkit-scrollbar-thumb {
         background: var(--slate-300);
         border-radius: 4px;
-      }
-
-      /* ========================================
-       ACCORDION ENHANCED
-       ======================================== */
-      .accordion-enhanced .accordion-header {
-        transition: var(--transition-smooth);
-      }
-
-      .accordion-enhanced .accordion-header:hover {
-        background: linear-gradient(
-          to right,
-          var(--ui-bg-elevated),
-          var(--ui-bg)
-        );
-      }
-
-      .accordion-enhanced .accordion-icon {
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .accordion-enhanced .accordion-item.active .accordion-icon {
-        transform: rotate(180deg);
       }
 
       /* ========================================
@@ -3175,7 +3123,7 @@
         color: var(--info-500);
       }
       .status-icon.default {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       /* Status pulse animation for icons */
@@ -5839,17 +5787,17 @@
                 <div
                   class="token-group"
                   style="
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     padding: 16px;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <h4
                     style="
                       font-size: 0.75rem;
                       font-weight: 600;
-                      color: var(--slate-600);
+                      color: var(--text-secondary);
                       margin-bottom: 10px;
                       text-transform: uppercase;
                       letter-spacing: 0.05em;
@@ -5869,44 +5817,44 @@
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--primary-500</code>
-                      <span style="color: var(--slate-500)">#3B82F6</span>
+                      <span style="color: var(--text-muted)">#3B82F6</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--success-500</code>
-                      <span style="color: var(--slate-500)">#10B981</span>
+                      <span style="color: var(--text-muted)">#10B981</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--warning-500</code>
-                      <span style="color: var(--slate-500)">#F59E0B</span>
+                      <span style="color: var(--text-muted)">#F59E0B</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--error-500</code>
-                      <span style="color: var(--slate-500)">#EF4444</span>
+                      <span style="color: var(--text-muted)">#EF4444</span>
                     </div>
                     <div
                       style="
@@ -5916,24 +5864,24 @@
                       "
                     >
                       <code>--slate-500</code>
-                      <span style="color: var(--slate-500)">#64748B</span>
+                      <span style="color: var(--text-muted)">#64748B</span>
                     </div>
                   </div>
                 </div>
                 <div
                   class="token-group"
                   style="
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     padding: 16px;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <h4
                     style="
                       font-size: 0.75rem;
                       font-weight: 600;
-                      color: var(--slate-600);
+                      color: var(--text-secondary);
                       margin-bottom: 10px;
                       text-transform: uppercase;
                       letter-spacing: 0.05em;
@@ -5953,44 +5901,44 @@
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--font-base</code>
-                      <span style="color: var(--slate-500)">'Anuphan'</span>
+                      <span style="color: var(--text-muted)">'Anuphan'</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--text-sm</code>
-                      <span style="color: var(--slate-500)">13px</span>
+                      <span style="color: var(--text-muted)">13px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--text-base</code>
-                      <span style="color: var(--slate-500)">14px</span>
+                      <span style="color: var(--text-muted)">14px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--text-lg</code>
-                      <span style="color: var(--slate-500)">16px</span>
+                      <span style="color: var(--text-muted)">16px</span>
                     </div>
                     <div
                       style="
@@ -6000,24 +5948,24 @@
                       "
                     >
                       <code>--text-xl</code>
-                      <span style="color: var(--slate-500)">18px</span>
+                      <span style="color: var(--text-muted)">18px</span>
                     </div>
                   </div>
                 </div>
                 <div
                   class="token-group"
                   style="
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     padding: 16px;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <h4
                     style="
                       font-size: 0.75rem;
                       font-weight: 600;
-                      color: var(--slate-600);
+                      color: var(--text-secondary);
                       margin-bottom: 10px;
                       text-transform: uppercase;
                       letter-spacing: 0.05em;
@@ -6037,44 +5985,44 @@
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--space-1</code>
-                      <span style="color: var(--slate-500)">4px</span>
+                      <span style="color: var(--text-muted)">4px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--space-2</code>
-                      <span style="color: var(--slate-500)">8px</span>
+                      <span style="color: var(--text-muted)">8px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--space-4</code>
-                      <span style="color: var(--slate-500)">16px</span>
+                      <span style="color: var(--text-muted)">16px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--space-6</code>
-                      <span style="color: var(--slate-500)">24px</span>
+                      <span style="color: var(--text-muted)">24px</span>
                     </div>
                     <div
                       style="
@@ -6084,24 +6032,24 @@
                       "
                     >
                       <code>--space-8</code>
-                      <span style="color: var(--slate-500)">32px</span>
+                      <span style="color: var(--text-muted)">32px</span>
                     </div>
                   </div>
                 </div>
                 <div
                   class="token-group"
                   style="
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     padding: 16px;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <h4
                     style="
                       font-size: 0.75rem;
                       font-weight: 600;
-                      color: var(--slate-600);
+                      color: var(--text-secondary);
                       margin-bottom: 10px;
                       text-transform: uppercase;
                       letter-spacing: 0.05em;
@@ -6121,44 +6069,44 @@
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--radius-sm</code>
-                      <span style="color: var(--slate-500)">4px</span>
+                      <span style="color: var(--text-muted)">4px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--radius-md</code>
-                      <span style="color: var(--slate-500)">6px</span>
+                      <span style="color: var(--text-muted)">6px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--radius-lg</code>
-                      <span style="color: var(--slate-500)">8px</span>
+                      <span style="color: var(--text-muted)">8px</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 4px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--shadow-md</code>
-                      <span style="color: var(--slate-500)">md</span>
+                      <span style="color: var(--text-muted)">md</span>
                     </div>
                     <div
                       style="
@@ -6168,7 +6116,7 @@
                       "
                     >
                       <code>--shadow-lg</code>
-                      <span style="color: var(--slate-500)">lg</span>
+                      <span style="color: var(--text-muted)">lg</span>
                     </div>
                   </div>
                 </div>
@@ -6268,12 +6216,12 @@
                       align-items: center;
                       justify-content: center;
                       font-size: 0.6875rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                     "
                   >
                     xs
                   </div>
-                  <code style="font-size: 0.6875rem; color: var(--slate-600)"
+                  <code style="font-size: 0.6875rem; color: var(--text-secondary)"
                     >--shadow-xs</code
                   >
                 </div>
@@ -6298,12 +6246,12 @@
                       align-items: center;
                       justify-content: center;
                       font-size: 0.6875rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                     "
                   >
                     sm
                   </div>
-                  <code style="font-size: 0.6875rem; color: var(--slate-600)"
+                  <code style="font-size: 0.6875rem; color: var(--text-secondary)"
                     >--shadow-sm</code
                   >
                 </div>
@@ -6328,12 +6276,12 @@
                       align-items: center;
                       justify-content: center;
                       font-size: 0.6875rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                     "
                   >
                     md
                   </div>
-                  <code style="font-size: 0.6875rem; color: var(--slate-600)"
+                  <code style="font-size: 0.6875rem; color: var(--text-secondary)"
                     >--shadow-md</code
                   >
                 </div>
@@ -6358,12 +6306,12 @@
                       align-items: center;
                       justify-content: center;
                       font-size: 0.6875rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                     "
                   >
                     lg
                   </div>
-                  <code style="font-size: 0.6875rem; color: var(--slate-600)"
+                  <code style="font-size: 0.6875rem; color: var(--text-secondary)"
                     >--shadow-lg</code
                   >
                 </div>
@@ -6388,12 +6336,12 @@
                       align-items: center;
                       justify-content: center;
                       font-size: 0.6875rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                     "
                   >
                     xl
                   </div>
-                  <code style="font-size: 0.6875rem; color: var(--slate-600)"
+                  <code style="font-size: 0.6875rem; color: var(--text-secondary)"
                     >--shadow-xl</code
                   >
                 </div>
@@ -6416,12 +6364,12 @@
                       align-items: center;
                       justify-content: center;
                       font-size: 0.6875rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                     "
                   >
                     2xl
                   </div>
-                  <code style="font-size: 0.6875rem; color: var(--slate-600)"
+                  <code style="font-size: 0.6875rem; color: var(--text-secondary)"
                     >--shadow-2xl</code
                   >
                 </div>
@@ -6499,17 +6447,17 @@
               >
                 <div
                   style="
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     padding: 16px;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <h4
                     style="
                       font-size: 0.75rem;
                       font-weight: 600;
-                      color: var(--slate-600);
+                      color: var(--text-secondary);
                       margin-bottom: 12px;
                       text-transform: uppercase;
                     "
@@ -6523,7 +6471,7 @@
                           width: 50px;
                           font-family: monospace;
                           font-size: 0.75rem;
-                          color: var(--slate-600);
+                          color: var(--text-secondary);
                         "
                       >
                         100ms
@@ -6546,7 +6494,7 @@
                         ></div>
                       </div>
                       <code
-                        style="font-size: 0.6875rem; color: var(--slate-500)"
+                        style="font-size: 0.6875rem; color: var(--text-muted)"
                         >--transition-fast</code
                       >
                     </div>
@@ -6556,7 +6504,7 @@
                           width: 50px;
                           font-family: monospace;
                           font-size: 0.75rem;
-                          color: var(--slate-600);
+                          color: var(--text-secondary);
                         "
                       >
                         150ms
@@ -6579,7 +6527,7 @@
                         ></div>
                       </div>
                       <code
-                        style="font-size: 0.6875rem; color: var(--slate-500)"
+                        style="font-size: 0.6875rem; color: var(--text-muted)"
                         >--transition-base</code
                       >
                     </div>
@@ -6589,7 +6537,7 @@
                           width: 50px;
                           font-family: monospace;
                           font-size: 0.75rem;
-                          color: var(--slate-600);
+                          color: var(--text-secondary);
                         "
                       >
                         300ms
@@ -6612,7 +6560,7 @@
                         ></div>
                       </div>
                       <code
-                        style="font-size: 0.6875rem; color: var(--slate-500)"
+                        style="font-size: 0.6875rem; color: var(--text-muted)"
                         >--transition-slow</code
                       >
                     </div>
@@ -6620,17 +6568,17 @@
                 </div>
                 <div
                   style="
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     padding: 16px;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <h4
                     style="
                       font-size: 0.75rem;
                       font-weight: 600;
-                      color: var(--slate-600);
+                      color: var(--text-secondary);
                       margin-bottom: 12px;
                       text-transform: uppercase;
                     "
@@ -6649,22 +6597,22 @@
                         display: flex;
                         justify-content: space-between;
                         padding: 6px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--ease-linear</code
-                      ><span style="color: var(--slate-500)">linear</span>
+                      ><span style="color: var(--text-muted)">linear</span>
                     </div>
                     <div
                       style="
                         display: flex;
                         justify-content: space-between;
                         padding: 6px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--ease-in</code
-                      ><span style="color: var(--slate-500)"
+                      ><span style="color: var(--text-muted)"
                         >cubic-bezier(0.4, 0, 1, 1)</span
                       >
                     </div>
@@ -6673,11 +6621,11 @@
                         display: flex;
                         justify-content: space-between;
                         padding: 6px 0;
-                        border-bottom: 1px solid var(--slate-200);
+                        border-bottom: 1px solid var(--border);
                       "
                     >
                       <code>--ease-out</code
-                      ><span style="color: var(--slate-500)"
+                      ><span style="color: var(--text-muted)"
                         >cubic-bezier(0, 0, 0.2, 1)</span
                       >
                     </div>
@@ -6689,7 +6637,7 @@
                       "
                     >
                       <code>--ease-in-out</code
-                      ><span style="color: var(--slate-500)"
+                      ><span style="color: var(--text-muted)"
                         >cubic-bezier(0.4, 0, 0.2, 1)</span
                       >
                     </div>
@@ -6780,7 +6728,7 @@
                     style="
                       padding: 16px;
                       background: white;
-                      border: 1px solid var(--slate-200);
+                      border: 1px solid var(--border);
                       border-radius: 8px;
                       text-align: center;
                     "
@@ -6789,7 +6737,7 @@
                       style="
                         font-size: 0.875rem;
                         font-weight: 600;
-                        color: var(--slate-900);
+                        color: var(--text-primary);
                       "
                     >
                       Aa
@@ -6797,7 +6745,7 @@
                     <div
                       style="
                         font-size: 0.6875rem;
-                        color: var(--slate-500);
+                        color: var(--text-muted);
                         margin-top: 4px;
                       "
                     >
@@ -6824,7 +6772,7 @@
                     <div
                       style="
                         font-size: 0.6875rem;
-                        color: var(--slate-400);
+                        color: var(--text-secondary);
                         margin-top: 4px;
                       "
                     >
@@ -6895,9 +6843,9 @@
                       gap: 10px;
                       align-items: center;
                       padding: 12px;
-                      background: var(--slate-50);
+                      background: var(--surface-sunken);
                       border-radius: 8px;
-                      border: 1px solid var(--slate-200);
+                      border: 1px solid var(--border);
                     "
                   >
                     <button
@@ -6932,16 +6880,16 @@
                   </div>
                   <div
                     style="
-                      background: var(--slate-50);
+                      background: var(--surface-sunken);
                       padding: 12px;
                       border-radius: 8px;
-                      border: 1px solid var(--slate-200);
+                      border: 1px solid var(--border);
                     "
                   >
                     <ul
                       style="
                         font-size: 0.75rem;
-                        color: var(--slate-600);
+                        color: var(--text-secondary);
                         line-height: 1.7;
                         margin-left: 16px;
                       "
@@ -7037,7 +6985,7 @@
                   style="
                     padding: 32px 16px;
                     text-align: center;
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     border-radius: 10px;
                     border: 2px dashed var(--slate-300);
                   "
@@ -7060,7 +7008,7 @@
                     style="
                       font-size: 0.875rem;
                       font-weight: 600;
-                      color: var(--slate-700);
+                      color: var(--text-primary);
                       margin-bottom: 4px;
                     "
                   >
@@ -7069,7 +7017,7 @@
                   <p
                     style="
                       font-size: 0.75rem;
-                      color: var(--slate-500);
+                      color: var(--text-muted);
                       margin-bottom: 12px;
                     "
                   >
@@ -7083,7 +7031,7 @@
                     padding: 24px;
                     background: white;
                     border-radius: 10px;
-                    border: 1px solid var(--slate-200);
+                    border: 1px solid var(--border);
                   "
                 >
                   <div
@@ -7104,7 +7052,7 @@
                         animation: spin 1s linear infinite;
                       "
                     ></div>
-                    <span style="font-size: 0.8125rem; color: var(--slate-600)"
+                    <span style="font-size: 0.8125rem; color: var(--text-secondary)"
                       >Loading...</span
                     >
                   </div>
@@ -7209,7 +7157,7 @@
                       >
                         Connection Error
                       </h4>
-                      <p style="font-size: 0.75rem; color: var(--slate-600)">
+                      <p style="font-size: 0.75rem; color: var(--text-secondary)">
                         Check your internet connection.
                       </p>
                     </div>
@@ -7224,17 +7172,17 @@
               <pre
                 id="pattern-empty"
               ><code><span class="token-comment">&lt;!-- Empty State --&gt;</span>
-<span class="token-tag">&lt;div</span> <span class="token-attr">style</span>=<span class="token-value">"padding: 32px; text-align: center; background: var(--slate-50); border-radius: 10px; border: 2px dashed var(--slate-300);"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">style</span>=<span class="token-value">"padding: 32px; text-align: center; background: var(--surface-sunken); border-radius: 10px; border: 2px dashed var(--slate-300);"</span><span class="token-tag">&gt;</span>
   <span class="token-tag">&lt;svg</span> <span class="token-attr">width</span>=<span class="token-value">"40"</span> <span class="token-attr">height</span>=<span class="token-value">"40"</span> <span class="token-attr">stroke</span>=<span class="token-value">"var(--slate-400)"</span><span class="token-tag">&gt;</span>...<span class="token-tag">&lt;/svg&gt;</span>
-  <span class="token-tag">&lt;h4</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.875rem; font-weight: 600; color: var(--slate-700);"</span><span class="token-tag">&gt;</span>No Documents<span class="token-tag">&lt;/h4&gt;</span>
-  <span class="token-tag">&lt;p</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.75rem; color: var(--slate-500);"</span><span class="token-tag">&gt;</span>Upload your first file.<span class="token-tag">&lt;/p&gt;</span>
+  <span class="token-tag">&lt;h4</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.875rem; font-weight: 600; color: var(--text-primary);"</span><span class="token-tag">&gt;</span>No Documents<span class="token-tag">&lt;/h4&gt;</span>
+  <span class="token-tag">&lt;p</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.75rem; color: var(--text-muted);"</span><span class="token-tag">&gt;</span>Upload your first file.<span class="token-tag">&lt;/p&gt;</span>
   <span class="token-tag">&lt;button</span> <span class="token-attr">class</span>=<span class="token-value">"btn btn-primary btn-sm"</span><span class="token-tag">&gt;</span>Upload<span class="token-tag">&lt;/button&gt;</span>
 <span class="token-tag">&lt;/div&gt;</span>
 
 <span class="token-comment">&lt;!-- Loading State --&gt;</span>
 <span class="token-tag">&lt;div</span> <span class="token-attr">style</span>=<span class="token-value">"display: flex; align-items: center; gap: 10px;"</span><span class="token-tag">&gt;</span>
   <span class="token-tag">&lt;div</span> <span class="token-attr">style</span>=<span class="token-value">"width: 20px; height: 20px; border: 2px solid var(--slate-200); border-top-color: var(--primary-600); border-radius: 50%; animation: spin 1s linear infinite;"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
-  <span class="token-tag">&lt;span</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.8125rem; color: var(--slate-600);"</span><span class="token-tag">&gt;</span>Loading...<span class="token-tag">&lt;/span&gt;</span>
+  <span class="token-tag">&lt;span</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.8125rem; color: var(--text-secondary);"</span><span class="token-tag">&gt;</span>Loading...<span class="token-tag">&lt;/span&gt;</span>
 <span class="token-tag">&lt;/div&gt;</span>
 <span class="token-tag">&lt;div</span> <span class="token-attr">style</span>=<span class="token-value">"height: 8px; background: var(--slate-200); border-radius: 4px; width: 80%; animation: pulse 2s infinite;"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
 
@@ -7251,7 +7199,7 @@
   <span class="token-tag">&lt;svg</span> <span class="token-attr">width</span>=<span class="token-value">"18"</span> <span class="token-attr">height</span>=<span class="token-value">"18"</span> <span class="token-attr">stroke</span>=<span class="token-value">"var(--error-500)"</span><span class="token-tag">&gt;</span>...<span class="token-tag">&lt;/svg&gt;</span>
   <span class="token-tag">&lt;div&gt;</span>
     <span class="token-tag">&lt;h4</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.8125rem; font-weight: 600; color: var(--error-700);"</span><span class="token-tag">&gt;</span>Connection Error<span class="token-tag">&lt;/h4&gt;</span>
-    <span class="token-tag">&lt;p</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.75rem; color: var(--slate-600);"</span><span class="token-tag">&gt;</span>Check your internet connection.<span class="token-tag">&lt;/p&gt;</span>
+    <span class="token-tag">&lt;p</span> <span class="token-attr">style</span>=<span class="token-value">"font-size: 0.75rem; color: var(--text-secondary);"</span><span class="token-tag">&gt;</span>Check your internet connection.<span class="token-tag">&lt;/p&gt;</span>
   <span class="token-tag">&lt;/div&gt;</span>
 <span class="token-tag">&lt;/div&gt;</span></code></pre>
             </div>
@@ -7482,11 +7430,11 @@
                 style="
                   margin-top: 16px;
                   padding: 12px 16px;
-                  background: var(--slate-50);
+                  background: var(--surface-sunken);
                   border-radius: 8px;
                 "
               >
-                <span class="text-sm" style="color: var(--slate-600)"
+                <span class="text-sm" style="color: var(--text-secondary)"
                   >💡 Try: Click "Click to Load" button, hover over "Elevate"
                   for shadow effect</span
                 >
@@ -11096,13 +11044,14 @@
               </button>
             </div>
             <div class="ds-component-preview">
-              <div
-                class="accordion accordion-enhanced"
-                style="max-width: 600px"
-              >
+              <div class="accordion" style="max-width: 600px">
                 <div class="accordion-item active">
                   <button
                     class="accordion-header"
+                    type="button"
+                    id="accordion-header-1"
+                    aria-expanded="true"
+                    aria-controls="accordion-panel-1"
                     onclick="toggleAccordion(this)"
                   >
                     <span>Patient Information</span>
@@ -11120,7 +11069,7 @@
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </button>
-                  <div class="accordion-body">
+                  <div class="accordion-body" id="accordion-panel-1" role="region" aria-labelledby="accordion-header-1">
                     Patient personal details including name, date of birth,
                     contact information, and emergency contacts. All information
                     is securely stored and HIPAA compliant.
@@ -11129,6 +11078,10 @@
                 <div class="accordion-item">
                   <button
                     class="accordion-header"
+                    type="button"
+                    id="accordion-header-2"
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-2"
                     onclick="toggleAccordion(this)"
                   >
                     <span>Medical History</span>
@@ -11146,7 +11099,7 @@
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </button>
-                  <div class="accordion-body">
+                  <div class="accordion-body" id="accordion-panel-2" role="region" aria-labelledby="accordion-header-2">
                     Previous diagnoses, surgeries, hospitalizations, family
                     medical history, and social history including smoking,
                     alcohol, and exercise habits.
@@ -11155,6 +11108,10 @@
                 <div class="accordion-item">
                   <button
                     class="accordion-header"
+                    type="button"
+                    id="accordion-header-3"
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-3"
                     onclick="toggleAccordion(this)"
                   >
                     <span>Current Medications</span>
@@ -11172,7 +11129,7 @@
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </button>
-                  <div class="accordion-body">
+                  <div class="accordion-body" id="accordion-panel-3" role="region" aria-labelledby="accordion-header-3">
                     List of all current prescriptions with dosages, frequencies,
                     prescribing physicians, and start dates. Includes
                     over-the-counter medications and supplements.
@@ -11181,6 +11138,10 @@
                 <div class="accordion-item">
                   <button
                     class="accordion-header"
+                    type="button"
+                    id="accordion-header-4"
+                    aria-expanded="false"
+                    aria-controls="accordion-panel-4"
                     onclick="toggleAccordion(this)"
                   >
                     <span>Lab Results</span>
@@ -11198,7 +11159,7 @@
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </button>
-                  <div class="accordion-body">
+                  <div class="accordion-body" id="accordion-panel-4" role="region" aria-labelledby="accordion-header-4">
                     Recent laboratory test results including blood work,
                     urinalysis, imaging reports, and pathology results with
                     reference ranges and trends over time.
@@ -11337,8 +11298,10 @@
                     Avatar Group
                   </p>
                   <div class="avatar-group">
-                    <span class="avatar">JD</span>
-                    <span class="avatar" style="background: var(--success-600)"
+                    <span class="avatar avatar-status"
+                      ><img src="image/A1.png" alt="User"
+                    /></span>
+                    <span class="avatar avatar-status away" style="background: var(--success-600)"
                       >SP</span
                     >
                     <span class="avatar" style="background: var(--warning-500)"
@@ -11354,6 +11317,9 @@
                     Avatar with Status Dots
                   </p>
                   <div class="preview-row" style="gap: 16px">
+                    <span class="avatar avatar-status"
+                      ><img src="image/A1.png" alt="User"
+                    /></span>
                     <span class="avatar avatar-status">JD</span>
                     <span class="avatar avatar-status away">JD</span>
                     <span class="avatar avatar-status busy">JD</span>
@@ -12467,7 +12433,7 @@
                   class="flex flex-row gap-2"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12508,7 +12474,7 @@
                   class="flex flex-col gap-2"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12596,7 +12562,7 @@
                   class="flex justify-start gap-2"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12627,7 +12593,7 @@
                   class="flex justify-center gap-2"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12658,7 +12624,7 @@
                   class="flex justify-between gap-2"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12736,7 +12702,7 @@
                     style="
                       height: 100px;
                       padding: 12px;
-                      background: var(--slate-100);
+                      background: var(--surface-sunken);
                       border-radius: var(--radius-md);
                     "
                   >
@@ -12770,7 +12736,7 @@
                     style="
                       height: 100px;
                       padding: 12px;
-                      background: var(--slate-100);
+                      background: var(--surface-sunken);
                       border-radius: var(--radius-md);
                     "
                   >
@@ -12804,7 +12770,7 @@
                     style="
                       height: 100px;
                       padding: 12px;
-                      background: var(--slate-100);
+                      background: var(--surface-sunken);
                       border-radius: var(--radius-md);
                     "
                   >
@@ -12881,7 +12847,7 @@
                   class="flex gap-1"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12922,7 +12888,7 @@
                   class="flex gap-2"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -12963,7 +12929,7 @@
                   class="flex gap-4"
                   style="
                     padding: 12px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-md);
                   "
                 >
@@ -13654,7 +13620,7 @@
                   style="
                     width: 80px;
                     height: 80px;
-                    background: var(--slate-100);
+                    background: var(--surface-sunken);
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -13811,7 +13777,7 @@
                   class="flex flex-wrap justify-between items-center gap-4"
                   style="
                     padding: 16px;
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     border-radius: var(--radius-lg);
                     border: 1px solid var(--border-color);
                   "
@@ -14205,7 +14171,7 @@
                   class="flex flex-wrap justify-between items-center gap-3"
                   style="
                     padding: 12px 16px;
-                    background: var(--slate-50);
+                    background: var(--surface-sunken);
                     border-top: 1px solid var(--border-color);
                   "
                 >
@@ -15710,15 +15676,21 @@
       // ========================================
       function toggleAccordion(header) {
         const item = header.parentElement;
+        const accordion = item.closest(".accordion");
         const isActive = item.classList.contains("active");
 
-        // Optional: Close all others (accordion behavior)
-        // item.parentElement.querySelectorAll('.accordion-item').forEach(i => {
-        //   i.classList.remove('active');
-        // });
+        accordion.querySelectorAll(".accordion-item").forEach((entry) => {
+          entry.classList.remove("active");
+          const trigger = entry.querySelector(".accordion-header");
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", "false");
+          }
+        });
 
-        // Toggle current
-        item.classList.toggle("active", !isActive);
+        if (!isActive) {
+          item.classList.add("active");
+          header.setAttribute("aria-expanded", "true");
+        }
       }
 
       // ========================================

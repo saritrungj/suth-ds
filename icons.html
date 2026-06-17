@@ -20,18 +20,9 @@
 
       body {
         font-family: "Anuphan", sans-serif;
-        background: linear-gradient(
-          180deg,
-          var(--slate-100) 0%,
-          var(--slate-50) 100%
-        );
-        color: var(--slate-800);
+        background: var(--bg-body);
+        color: var(--text-primary);
         min-height: 100vh;
-      }
-
-      [data-theme="dark"] body {
-        background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-        color: var(--slate-100);
       }
 
       .container {
@@ -49,13 +40,13 @@
       }
 
       [data-theme="dark"] .page-header {
-        border-bottom-color: var(--slate-700);
+        border-bottom-color: var(--border);
       }
 
       .page-title {
         font-size: 2.5rem;
         font-weight: 700;
-        color: var(--slate-800);
+        color: var(--text-primary);
         margin-bottom: 12px;
         display: flex;
         align-items: center;
@@ -64,18 +55,18 @@
       }
 
       [data-theme="dark"] .page-title {
-        color: var(--slate-100);
+        color: var(--text-primary);
       }
 
       .page-subtitle {
         font-size: 1.125rem;
-        color: var(--slate-500);
+        color: var(--text-muted);
         max-width: 600px;
         margin: 0 auto;
       }
 
       [data-theme="dark"] .page-subtitle {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       /* Back Link */
@@ -107,7 +98,7 @@
 
       [data-theme="dark"] .search-section {
         background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
-        border-color: var(--slate-700);
+        border-color: var(--border);
       }
 
       .search-box {
@@ -123,14 +114,14 @@
         border: 2px solid var(--slate-200);
         border-radius: 12px;
         background: var(--slate-50);
-        color: var(--slate-800);
+        color: var(--text-primary);
         transition: all 0.2s;
       }
 
       [data-theme="dark"] .search-input {
         background: var(--slate-800);
-        border-color: var(--slate-600);
-        color: var(--slate-100);
+        border-color: var(--border);
+        color: var(--text-primary);
       }
 
       .search-input:focus {
@@ -150,7 +141,7 @@
         left: 18px;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--slate-400);
+        color: var(--text-secondary);
         pointer-events: none;
       }
 
@@ -173,15 +164,15 @@
         border: 1px solid var(--slate-200);
         border-radius: 9999px;
         background: #ffffff;
-        color: var(--slate-600);
+        color: var(--text-secondary);
         cursor: pointer;
         transition: all 0.2s;
       }
 
       [data-theme="dark"] .category-btn {
         background: var(--slate-800);
-        border-color: var(--slate-600);
-        color: var(--slate-400);
+        border-color: var(--border);
+        color: var(--text-secondary);
       }
 
       .category-btn:hover {
@@ -204,13 +195,13 @@
       /* Results Count */
       .results-count {
         font-size: 0.875rem;
-        color: var(--slate-500);
+        color: var(--text-muted);
         margin-bottom: 24px;
         padding: 0 8px;
       }
 
       [data-theme="dark"] .results-count {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       .results-count strong {
@@ -225,7 +216,7 @@
       .category-title {
         font-size: 1.5rem;
         font-weight: 600;
-        color: var(--slate-800);
+        color: var(--text-primary);
         margin-bottom: 20px;
         display: flex;
         align-items: center;
@@ -234,7 +225,7 @@
       }
 
       [data-theme="dark"] .category-title {
-        color: var(--slate-100);
+        color: var(--text-primary);
       }
 
       .category-icon {
@@ -279,7 +270,7 @@
 
       [data-theme="dark"] .icon-card {
         background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
-        border-color: var(--slate-700);
+        border-color: var(--border);
       }
 
       .icon-card:hover {
@@ -327,12 +318,12 @@
         width: 32px;
         height: 32px;
         margin: 0 auto 12px;
-        color: var(--slate-700);
+        color: var(--text-primary);
         transition: all 0.2s;
       }
 
       [data-theme="dark"] .icon-display {
-        color: var(--slate-300);
+        color: var(--text-secondary);
       }
 
       .icon-card:hover .icon-display {
@@ -343,21 +334,21 @@
       .icon-name {
         font-size: 0.75rem;
         font-weight: 500;
-        color: var(--slate-600);
+        color: var(--text-secondary);
         word-break: break-word;
         line-height: 1.4;
       }
 
       [data-theme="dark"] .icon-name {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       .icon-card:hover .icon-name {
-        color: var(--slate-800);
+        color: var(--text-primary);
       }
 
       [data-theme="dark"] .icon-card:hover .icon-name {
-        color: var(--slate-200);
+        color: var(--text-primary);
       }
 
       /* Copy Feedback */
@@ -397,33 +388,33 @@
       .no-results {
         text-align: center;
         padding: 64px 24px;
-        color: var(--slate-500);
+        color: var(--text-muted);
       }
 
       [data-theme="dark"] .no-results {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
 
       .no-results-icon {
         width: 64px;
         height: 64px;
         margin: 0 auto 16px;
-        color: var(--slate-300);
+        color: var(--text-secondary);
       }
 
       [data-theme="dark"] .no-results-icon {
-        color: var(--slate-600);
+        color: var(--text-secondary);
       }
 
       .no-results h3 {
         font-size: 1.25rem;
         font-weight: 600;
         margin-bottom: 8px;
-        color: var(--slate-700);
+        color: var(--text-primary);
       }
 
       [data-theme="dark"] .no-results h3 {
-        color: var(--slate-300);
+        color: var(--text-secondary);
       }
 
       /* Hidden */
@@ -440,16 +431,16 @@
       }
 
       [data-theme="dark"] .page-footer {
-        border-top-color: var(--slate-700);
+        border-top-color: var(--border);
       }
 
       .page-footer p {
-        color: var(--slate-500);
+        color: var(--text-muted);
         font-size: 0.875rem;
       }
 
       [data-theme="dark"] .page-footer p {
-        color: var(--slate-400);
+        color: var(--text-secondary);
       }
     </style>
   </head>
